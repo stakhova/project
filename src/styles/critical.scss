@@ -1,0 +1,94 @@
+@mixin font-face($style-name, $file:$style-name, $weight:normal, $style:normal) {
+    $filepath: "../fonts/" + $file;
+    @font-face {
+        font-family: quote($style-name);
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+        url($filepath + ".woff") format('woff'),
+        url($filepath + ".ttf") format('truetype'),
+        url($filepath + ".svg#" + $style-name + "") format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@include font-face("Gibson", "Gibson", 400, normal);
+@include font-face("Gibson", "Gibson-Bold", 700, normal);
+@include font-face("Gibson", "Gibson-Light", 300, normal);
+@include font-face("Gibson", "Gibson-SemiBold", 600, normal);
+
+
+
+
+
+
+/* base styles*/
+*,*:before,
+*:after {
+    box-sizing: border-box;
+    outline: none;
+}
+*,body,html {
+    -webkit-text-size-adjust: none;
+    -webkit-appearance: none;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    &:hover{
+        text-decoration: none;
+    }
+}
+html {
+    font-size: 10px;
+
+    @media only screen and ( min-width: 2560px) {
+        font-size: 17.77px;
+    }
+
+    @media only screen and ( min-width: 1920px) {
+        font-size: 13.3px;
+    }
+
+    @media only screen and ( max-width: 1680px) {
+        font-size: 11.66px;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        font-size: 10px;
+    }
+
+    @media only screen and (max-width: 1366px) {
+        font-size: 9.49px;
+    }
+
+    @media only screen and ( max-width: 1280px){
+        font-size: 8.88px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        font-size: 7.11px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 5.33px;
+    }
+
+    @media only screen and (max-width: 666px) {
+        font-size: 10px;
+    }
+}
