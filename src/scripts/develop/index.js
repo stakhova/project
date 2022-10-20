@@ -13,11 +13,15 @@ const sliderInsights = () =>{
     }
 }
 
-const addStyleHeader = ( classWrap, classHeader) =>{
-    console.log('sdsdssd')
-    if ($('.global-wrapper ').hasClass(classWrap)) {
-        console.log('dsdfdsf')
-        $('header').addClass(classHeader);
+// const addStyleHeader = ( classWrap, classHeader) =>{
+//     if ($('.global-wrapper ').hasClass(classWrap)) {
+//         $('header').addClass(classHeader);
+//     }
+// }
+
+const addStyle = () =>{
+    if ($('.global-wrapper ').hasClass('cx')) {
+        $('header').addClass('cx__header');
     }
 }
 
@@ -102,18 +106,18 @@ $(document).ready(function(){
 });
 
 $(window).load(function(){
-
-
     let formSubs = $('.subs__form'),
         modalSubs = $('.subs__modal'),
         formFooter = $('.footer__form'),
-        modalFooter= $('.footer__modal'),
-        cxWrap = $('.cx'),
-        cxHeader = $('.cx__header'),
-        strategyWrap = $('.strategy'),
-        strategyHeader = $('.strategy__header');
-    addStyleHeader(cxWrap, cxHeader);
-    addStyleHeader(strategyWrap, strategyHeader);
+        modalFooter= $('.footer__modal');
+    //     cxWrap = $('.cx'),
+    //     cxHeader = $('.cx__header'),
+    //     strategyWrap = $('.strategy'),
+    //     strategyHeader = $('.strategy__header');
+    // addStyleHeader(cxWrap, cxHeader);
+    // addStyleHeader(strategyWrap, strategyHeader);
+
+    addStyle();
     accordion();
     openMenu();
     validateForm(modalSubs,formSubs)
