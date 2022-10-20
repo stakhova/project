@@ -17,6 +17,19 @@
 @include font-face("Gibson", "Gibson-Light", 300, normal);
 @include font-face("Gibson", "Gibson-SemiBold", 600, normal);
 
+:root{
+    --main-color: #000F2E;
+    --color-white: #fff;
+    --color-subtitle: #002EAA;
+    --color-desc: #717783;
+    --color-back: #0045FF;
+    --color-footer: #CCCFD5;
+    --color-orange: #E48038;
+    --color-strategy: #FCF089;
+    --color-cx: #79D6B0;
+
+    --Gibson: 'Gibson', sans-serif;
+}
 
 
 

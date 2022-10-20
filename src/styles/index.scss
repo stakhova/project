@@ -1,17 +1,8 @@
-$main_color: #000F2E;
-$color_subtitle: #002EAA;
-$color_desc: #717783;
-$color_back: #0045FF;
-$color_footer: #CCCFD5;
-$Gibson: 'Gibson', sans-serif;
-
-
-
 
 // style wrap
 .wrap{
-  font-family: $Gibson;
-  color: $main_color;
+  font-family: var(--Gibson);
+  color: var(--main-color);
   max-width: 100vw;
   width:100%;
   overflow: hidden;
@@ -24,10 +15,10 @@ $Gibson: 'Gibson', sans-serif;
 .container{
   width: 100%;
   max-width: 144rem;
-  padding: 10rem 12rem;
+  padding: 10rem 11.8rem;
   margin: 0 auto;
-  font-family: $Gibson;
-  color: $main_color;
+  font-family: var(--Gibson);
+  color:  var(--main-color);
   overflow: hidden;
   font-size: 1.6rem;
   line-height: 150%;
@@ -53,7 +44,7 @@ $Gibson: 'Gibson', sans-serif;
       font-weight: 700;
       font-size: 9.2rem;
       line-height: 9.2rem;
-      color: white;
+      color: var(--color-white);
       margin-bottom: 3.2rem;
 
     }
@@ -62,21 +53,30 @@ $Gibson: 'Gibson', sans-serif;
       text-align: center;
       font-size: 7.2rem;
       line-height: 7.2rem;
-      color: $main_color;
+      color:  var(--main-color);
       margin-bottom: 4rem;
     }
     &-least > * {
       font-weight: 700;
       font-size: 5.4rem;
       line-height: 5.4rem;
-      color: $main_color;
+      color:  var(--main-color);
+    }
+    &-thin > *{
+      font-weight: 400;
+      font-size: 12.1rem;
+      line-height: 110%;
+      letter-spacing: 0.02em;
+      color: #000000;
+      text-transform: uppercase;
+      width: max-content;
     }
     &-black > * {
-      color: $main_color;
+      color:  var(--main-color);
     }
 
     &-white > * {
-      color: white;
+      color: var(--color-white);
     }
     &-overflow > *{
       font-size: 24.1rem;
@@ -94,24 +94,25 @@ $Gibson: 'Gibson', sans-serif;
       font-weight: 300;
       font-size: 2.4rem;
       line-height: 3.2rem;
-      color: $color_desc;
+      color: var(--color-desc);
     }
     &-main > *{
       font-size: 2rem;
       line-height: 3.2rem;
-      color: $main_color;
+      color: var(--main-color);
       margin-bottom: 3rem;
       &:not(:last-child){
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
       }
     }
     &-less > * {
       font-size: 2rem;
+      margin-bottom: 4rem;
     }
     &-middle > *{
       font-size: 2.2rem;
       line-height: 3.8rem;
-      color: $color_footer;
+      color: var(--color-footer);
     }
     &-column {
       column-count: 2;
@@ -126,7 +127,7 @@ $Gibson: 'Gibson', sans-serif;
   &__text > * {
     font-weight: 300;
     font-size: 1.6rem;
-    color: $color_desc;
+    color: var(--color-desc);
     overflow: hidden;
   }
 
@@ -137,7 +138,7 @@ $Gibson: 'Gibson', sans-serif;
       line-height: 2.2rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: $color_subtitle;
+      color: var(--color-subtitle);
     }
     &-center {
       text-align: center;
@@ -148,14 +149,14 @@ $Gibson: 'Gibson', sans-serif;
     & > * {
       font-weight: 400;
       font-size: 1.6rem;
-      color: white;
+      color: var(--color-white);
       padding: 0.4rem 0;
       width: max-content;
       transition: all 0.2s ease;
       display: inline-block;
       position: relative;
       &:hover {
-        color: #E48038;
+        color: var(--color-orange);
       }
       &:after {
         position: absolute;
@@ -164,7 +165,7 @@ $Gibson: 'Gibson', sans-serif;
         height: 2.4rem;
         border-radius: 100%;
         right: -0.6rem;
-        border: 0.1rem solid white;
+        border: 0.1rem solid var(--color-white);
         top: 0.4rem;
       }
     }
@@ -172,11 +173,11 @@ $Gibson: 'Gibson', sans-serif;
       width: 1.2rem;
       height: 0.8rem;
       position: relative;
-      fill: #E48038;
+      fill: var(--color-orange);
       margin-left: 1.6rem;
       opacity: 1;
       &:hover{
-        fill: white;
+        fill: var(--color-white);
       }
     }
   }
@@ -184,14 +185,14 @@ $Gibson: 'Gibson', sans-serif;
     display: none;
     min-width: 30rem;
     min-height: 20rem;
-    background: #FFFFFF;
+    background: var(--color-white);
     border-radius: 0.2rem;
     &-content{
       text-align: center;
       display: flex;
       align-items: center;
       font-size: 2.4rem;
-      font-family: $Gibson;
+      font-family: var(--Gibson);
     }
   }
 }
@@ -199,9 +200,10 @@ $Gibson: 'Gibson', sans-serif;
 
 //header style
 .header{
-  padding: 4.4rem 4.8rem 1.6rem;
+  padding: 4.4rem 4.8rem 0;
   position: relative;
   overflow: visible;
+
   &__block{
     display: flex;
     justify-content: space-between;
@@ -210,17 +212,22 @@ $Gibson: 'Gibson', sans-serif;
   &__logo{
     max-width: 20rem;
     max-height: 3.5rem;
+    display: block ;
+  }
+  &__flex{
+    display: flex;
+    justify-content: flex-end;
   }
   &__menu{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     &-item{
-      margin-left: 4rem;
+      margin-right: 4rem;
       font-size: 1.4rem;
       transition: all 0.2s ease;
       &:hover{
-        color:$color_back ;
+        color:var(--color-back) ;
       }
     }
   }
@@ -232,10 +239,15 @@ $Gibson: 'Gibson', sans-serif;
     }
   }
   &__hidden{
+    &-item{
+      &:first-child {
+        margin-bottom: 7.4rem;
+      }
+    }
     &-img{
       position: absolute;
       top: 4.7rem;
-      left: 12rem;
+      left: 11.8rem;
       width: 3.7rem;
       height: 3.5rem;
     }
@@ -244,18 +256,16 @@ $Gibson: 'Gibson', sans-serif;
         margin-left: 27rem;
       }
     }
+    &-title{
+
+      font-size: 4.4rem;
+      line-height: 4.4rem;
+      color: var(--color-subtitle);
+      margin-bottom: 3.2rem;
+    }
     &-list{
-      &:first-child{
-        margin-bottom: 7.6rem;
-      }
-      li:first-child{
-        font-size: 4.4rem;
-        line-height: 4.4rem;
-        color: $color_subtitle;
-        margin-bottom: 3.2rem;
-      }
       li{
-        margin-bottom: 1.2rem;
+        margin-bottom: 2rem;
       }
       a{
         font-style: normal;
@@ -264,9 +274,9 @@ $Gibson: 'Gibson', sans-serif;
         line-height: 1.6rem;
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        color: $color_desc;
+        color: var(--color-desc);
         &:hover{
-          color:$main_color;
+          color:var(--main-color);
           font-weight: 500;
         }
       }
@@ -280,7 +290,7 @@ $Gibson: 'Gibson', sans-serif;
         line-height: 3.2rem;
         opacity: 0.8;
         &:hover{
-          color:$color_subtitle
+          color:var(--color-subtitle);
         }
       }
     }
@@ -292,21 +302,20 @@ $Gibson: 'Gibson', sans-serif;
     flex-direction:column;
     align-items: center;
     justify-content: center;
-    background: $color_back;
+    background: var(--color-back);
     border-radius: 100% ;
     cursor: pointer ;
-    padding: 5px;
     position: relative;
-    z-index: 3;
+    z-index: 4;
     &-container{
-      padding: 0 12rem;
+      padding: 0 11.8rem;
       position: relative;
       height: 100vh;
     }
     & > *{
       width: 1.4rem;
       height: 0.2rem;
-      background: white;
+      background: var(--color-white);
       border-radius: 0.2rem;
       transition: .7s ease;
       &:first-child{
@@ -314,20 +323,20 @@ $Gibson: 'Gibson', sans-serif;
       }
     }
     &-open{
-      background-color: $main_color;
+      background-color: var(--main-color);
       span{
         display: block;
         position: absolute;
         &:nth-child(1) {
           transform: rotate(-45deg);
           transition: .7s ease;
-          background: #fff;
+          background: var(--color-white);
           margin: 0;
         }
         &:nth-child(2) {
           transform: rotate(45deg);
           transition: .7s ease;
-          background: #fff;
+          background: var(--color-white);
         }
 
       }
@@ -342,9 +351,10 @@ $Gibson: 'Gibson', sans-serif;
       display: flex;
       justify-content: flex-start;
       padding: 20rem 22.2rem;
+      z-index: 4;
     }
     &-menu{
-      background: white;
+      background: var(--color-white);
       width: 100vw;
       height: 100vh;
       position: absolute;
@@ -359,6 +369,12 @@ $Gibson: 'Gibson', sans-serif;
       top: -10rem;
       width: 100%;
       overflow: hidden;
+      z-index: -1;
+    }
+    &-relative{
+      background-color:var(--color-white);
+      position:relative;
+      z-index: 3;
     }
   }
 
@@ -369,7 +385,7 @@ $Gibson: 'Gibson', sans-serif;
 .main{
   &__wrap{
     position: relative;
-    padding-top:5.2rem;
+    padding-top:6.8rem;
     padding-bottom:16.2rem;
   }
   &__title{
@@ -378,15 +394,15 @@ $Gibson: 'Gibson', sans-serif;
       font-weight: 700;
       font-size: 13.2rem;
       line-height: 12.4rem;
-      color: white;
-      -webkit-text-stroke: 0.1rem $main_color;
+      color: var(--color-white);
+      -webkit-text-stroke: 0.1rem var(--main-color);
     }
   }
   &__img{
     width:135.1rem;
     height:64.3rem;
     position: absolute;
-    top: -3rem;
+    top: -1.5rem;
     right: 9rem;
   }
   &__social{
@@ -402,7 +418,7 @@ $Gibson: 'Gibson', sans-serif;
       height: 3.6rem;
       background: rgba(255, 255, 255, 0.6);
       border: .1rem solid #F2F3F5;
-      box-shadow: 2px 24px 34px -10px rgba(0, 0, 0, 0.04);
+      box-shadow: 0.2rem 2.4rem 3.4rem -10rem rgba(0, 0, 0, 0.04);
       backdrop-filter: blur(1.2rem);
       border-radius: 2.4rem;
       display: block;
@@ -414,7 +430,7 @@ $Gibson: 'Gibson', sans-serif;
         display: block;
       }
       &:hover{
-        border: .1rem solid $main_color;
+        border: .1rem solid var(--main-color);
       }
       &:not(:last-child){
         margin-bottom: 1.6rem;
@@ -427,9 +443,9 @@ $Gibson: 'Gibson', sans-serif;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      fill: $main_color;
-      stroke: $main_color;
-      path: $main_color;
+      fill: var(--main-color);
+      stroke:  var(--main-color);
+      path:  var(--main-color);
     }
   }
   &__contactus{
@@ -439,11 +455,29 @@ $Gibson: 'Gibson', sans-serif;
     width: 10rem;
     height: 10rem;
     &-top{
-      right: 2rem;
-      top: 3rem;
+      bottom: 14rem;
+    }
+  }
+  &__flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 4rem;
+    &-img{
+      height: 10rem;
+    }
+    &-left{
+      width: 42.7rem;
+      margin-right: 6rem;
+    }
+    &-right{
+      width:59.5rem;
+      margin-left: 6rem;
     }
   }
 }
+
+
 
 .whatdo{
   &__wrap{
@@ -468,7 +502,7 @@ $Gibson: 'Gibson', sans-serif;
     line-height: 1.4rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: $color_desc;
+    color: var(--color-desc);
     margin-bottom: 1.6rem;
     display: inline-block;
   }
@@ -476,11 +510,11 @@ $Gibson: 'Gibson', sans-serif;
     font-weight: 600;
     font-size: 3.6rem;
     line-height: 3.6rem;
-    color: white;
+    color: var(--color-white);
   }
   &__desc > *{
     margin: 3.2rem 0 2.2rem ;
-    height: 12rem;
+    height: 11.8rem;
   }
 }
 
@@ -496,9 +530,9 @@ $Gibson: 'Gibson', sans-serif;
 
   &__item{
     &:not(:last-child){
-      background-image: linear-gradient(to right, $color_desc 30%, rgba(255, 255, 255, 0) 10%);
+      background-image: linear-gradient(to right, var(--color-desc) 30%, rgba(255, 255, 255, 0) 10%);
       background-position: bottom;
-      background-size: 5px 2px;
+      background-size: 0.5rem 0.2rem;
       background-repeat: repeat-x;
     }
     padding: 5.4rem 0;
@@ -506,12 +540,12 @@ $Gibson: 'Gibson', sans-serif;
       font-weight: 600;
       font-size: 5.6rem;
       line-height: 5.6rem;
-      color:$color_subtitle;
+      color:var(--color-subtitle);
       margin-bottom: 2.4rem;
       display: inline-block;
       transition: all 0.2s ease;
       &:hover{
-        color: $main_color;
+        color:  var(--main-color);
       }
     }
   }
@@ -567,14 +601,14 @@ $Gibson: 'Gibson', sans-serif;
     margin-bottom: 10rem;
   }
   &__paragraph{
-    padding: 6rem 12rem 16rem;
+    padding: 6rem 11.8rem 16rem;
     position: relative;
     font-weight: 300;
     font-size: 4.1rem;
     line-height: 7.2rem;
     text-align: center;
     span{
-      color: $color_back;
+      color: var(--color-back);
     }
     &:before{
       content: url("../img/icon/paragraph.svg");
@@ -596,12 +630,12 @@ $Gibson: 'Gibson', sans-serif;
     left: 0;
     width: 4.8rem;
     height: 4.8rem;
-    border: 0.1rem solid white;
+    border: 0.1rem solid var(--color-white);
     border-radius: 100%;
     cursor: pointer;
     transition: all 0.2s ease;
     &:hover{
-      border: 0.1rem solid #E48038;;
+      border: 0.1rem solid var(--color-orange);;
     }
     &:after{
       width: 2.4rem;
@@ -621,8 +655,8 @@ $Gibson: 'Gibson', sans-serif;
   }
 
   .slick-list {
-    padding-left: 0px!important;
-    padding-right: 100px;
+    padding-left: 0!important;
+    padding-right: 10rem;
 
   }
   &__slider{
@@ -632,7 +666,7 @@ $Gibson: 'Gibson', sans-serif;
     position: relative;
     //height: 70rem;
     z-index: 2;
-    padding-left: 12rem;
+    padding-left: 11.8rem;
     padding-bottom: 18.2rem;
     &-block{
       position: relative;
@@ -644,7 +678,7 @@ $Gibson: 'Gibson', sans-serif;
         height: 30rem;
         width: 100vw;
         bottom:0;
-        background: $color_back;
+        background: var(--color-back);
         z-index: 1;
       }
     }
@@ -665,13 +699,13 @@ $Gibson: 'Gibson', sans-serif;
           height: 100%;
           padding: 0;
           border: 0.1rem;
-          background: $color_subtitle;
+          background: var(--color-subtitle);
           text-indent: -9999px;
         }
       }
       li.slick-active button {
         height: 0.6rem;
-        background: white;
+        background: var(--color-white);
         position: relative;
         top: -0.5rem;
       }
@@ -682,7 +716,7 @@ $Gibson: 'Gibson', sans-serif;
 .offer{
   overflow: visible;
   &__wrap{
-    padding: 12rem 0 21.3rem ;
+    padding: 11.8rem 0 21.3rem ;
     position: relative;
     margin: 0 auto;
   }
@@ -693,7 +727,7 @@ $Gibson: 'Gibson', sans-serif;
     text-align: center;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: white;
+    color: var(--color-white);
     margin: 4.8rem 0 8.7rem;
   }
   &__list{
@@ -723,11 +757,11 @@ $Gibson: 'Gibson', sans-serif;
     font-size: 1.8rem;
     line-height: 2.6rem;
     text-align: center;
-    color: white;
+    color: var(--color-white);
   }
   &__join{
     width:100%;
-    background: white;
+    background: var(--color-white);
     padding: 4.8rem;
     display: flex;
     justify-content: space-between;
@@ -750,20 +784,20 @@ $Gibson: 'Gibson', sans-serif;
       font-weight: 300;
       font-size: 2rem;
       line-height: 3.2rem;
-      color: $color_desc;
+      color: var(--color-desc);
     }
     &-button{
       & > *{
         padding: 1.5rem 5rem;
         font-size: 1.6rem;
         line-height: 2.4rem;
-        color: white;
-        background: $color_back;
+        color: var(--color-white);
+        background: var(--color-back);
         position: relative;
         z-index: 2;
         transition: all 0.2s ease;
         &:hover{
-          background-color: $main_color;
+          background-color:  var(--main-color);
         }
       }
     }
@@ -786,7 +820,7 @@ $Gibson: 'Gibson', sans-serif;
     font-size: 5.4rem;
     line-height: 5.4rem;
     text-align: center;
-    color: $main_color;
+    color:  var(--main-color);
   }
   &__desc {
     text-align: center;
@@ -796,7 +830,7 @@ $Gibson: 'Gibson', sans-serif;
     }
     &-blue > *{
       text-align: center;
-      color: $color_subtitle;
+      color: var(--color-subtitle);
       margin-bottom: 3.2rem;
     }
   }
@@ -807,7 +841,7 @@ $Gibson: 'Gibson', sans-serif;
   &__input{
     width: 100%;
     border: none;
-    border-bottom: 0.1rem solid $color_footer;
+    border-bottom: 0.1rem solid var(--color-footer);
     padding: 2.6rem 0;
     margin-bottom: 2.4rem;
     font-size: 2rem;
@@ -818,10 +852,10 @@ $Gibson: 'Gibson', sans-serif;
       outline: none;
     }
     &::placeholder{
-      font-family: $Gibson;
+      font-family: var(--Gibson);
       font-weight: 300;
       font-size: 2rem;
-      color: $color_desc;
+      color: var(--color-desc);
     }
     &-block{
       display: flex;
@@ -841,14 +875,14 @@ $Gibson: 'Gibson', sans-serif;
     & > *{
       font-size: 1.6rem;
       line-height: 2.4rem;
-      color: #FFFFFF;
-      background: $color_back;
+      color: var(--color-white);
+      background: var(--color-back);
       padding: 1.5rem 4.5rem;
       border: none;
       transition: all 0.2s ease;
       cursor: pointer;
       &:hover{
-        background-color: $main_color;
+        background-color:  var(--main-color);
       }
     }
   }
@@ -858,7 +892,7 @@ $Gibson: 'Gibson', sans-serif;
 .footer{
   background: black;
   &__wrap{
-    padding: 10rem 12rem 8.5rem;
+    padding: 10rem 11.8rem 8.5rem;
   }
   &__block{
     padding: 3.2rem 0 5rem;
@@ -871,9 +905,9 @@ $Gibson: 'Gibson', sans-serif;
       height: 0.1rem;
       left: 50%;
       transform: translate(-50%);
-      background-image: linear-gradient(to right, $color_desc 30%, rgba(255, 255, 255, 0) 10%);
+      background-image: linear-gradient(to right, var(--color-desc) 30%, rgba(255, 255, 255, 0) 10%);
       background-position: top;
-      background-size: 5px 2px;
+      background-size: 0.5rem 0.2rem;
       background-repeat: repeat-x;
     }
   }
@@ -890,13 +924,13 @@ $Gibson: 'Gibson', sans-serif;
       width: 100%;
       border: none;
       background: transparent;
-      color: white;
+      color: var(--color-white);
       font-size: 2.6rem;
       &::placeholder{
-        font-family: $Gibson;
+        font-family: var(--Gibson);
         font-weight: 300;
         font-size: 2.6rem;
-        color: $color_desc;
+        color: var(--color-desc);
       }
       &:focus-visible{
         outline: none;
@@ -904,22 +938,22 @@ $Gibson: 'Gibson', sans-serif;
     }
     &-button{
       padding: 1.5rem 3.7rem;
-      border: 0.1rem solid $color_back;
+      border: 0.1rem solid var(--color-back);
       background: transparent;
-      color: white;
+      color: var(--color-white);
       font-size: 1.6rem;
       line-height: 2.4rem;
       transition: all 0.2s ease;
       cursor: pointer;
       &:hover{
-        background-color: $color_back;
+        background-color: var(--color-back);
       }
     }
   }
   &__content{
     display: flex;
     justify-content: space-between;
-    font-family: $Gibson;
+    font-family: var(--Gibson);
     padding: 11rem 0 12.5rem;
   }
   &__logo{
@@ -931,7 +965,7 @@ $Gibson: 'Gibson', sans-serif;
     margin-right: 7.3rem;
     &-text{
       font-size: 1.4rem;
-      color: white;
+      color: var(--color-white);
     }
   }
   &__list{
@@ -943,7 +977,7 @@ $Gibson: 'Gibson', sans-serif;
     font-weight: 300;
     font-size: 1.6rem;
     line-height: 3.2rem;
-    color: $color_footer;
+    color: var(--color-footer);
     margin-bottom: 1.6rem;
     width: max-content;
     &-title{
@@ -952,14 +986,14 @@ $Gibson: 'Gibson', sans-serif;
       line-height: 1.6rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: $color_desc;
+      color: var(--color-desc);
       margin-bottom: 3.2rem;
       width: max-content;
     }
     &> a{
       transition: all 0.2s ease;
       &:hover{
-        color: $color_back ;
+        color: var(--color-back) ;
       }
     }
   }
@@ -969,14 +1003,14 @@ $Gibson: 'Gibson', sans-serif;
       margin-left: 2.6rem;
     }
     &-svg{
-      stroke: white;
-      fill: white;
+      stroke: var(--color-white);
+      fill: var(--color-white);
       width: 2.4rem;
       height: 2.4rem;
       transition: all 0.2s ease;
       &:hover{
-        stroke: $color_back;
-        fill:$color_back;
+        stroke: var(--color-back);
+        fill:var(--color-back);
       }
     }
   }
@@ -989,7 +1023,7 @@ $Gibson: 'Gibson', sans-serif;
     }
     &-text{
       font-size:1.4rem;
-      color: $color_desc;
+      color: var(--color-desc);
       margin-left: 3.2rem;
     }
     &-block{
@@ -1003,10 +1037,10 @@ $Gibson: 'Gibson', sans-serif;
 //cx style
 .cx{
   &__header{
-    background-color: #79D6B0;
+    background-color: var(--color-cx);
   }
   &__main{
-    background-color: #79D6B0;
+    background-color: var(--color-cx);
   }
   &__footer{
     position: relative;
@@ -1053,7 +1087,7 @@ $Gibson: 'Gibson', sans-serif;
 .digital{
   position: relative;
   z-index: 1;
-  background-color: $color_subtitle;
+  background-color: var(--color-subtitle);
   &__wrap{
     padding-bottom: 14.8rem;
   }
@@ -1080,7 +1114,7 @@ $Gibson: 'Gibson', sans-serif;
     text-align: center ;
     margin-top: 5.6rem;
     & > *{
-      color:$main_color
+      color:var(--main-color)
     }
   }
   &__img{
@@ -1114,12 +1148,12 @@ $Gibson: 'Gibson', sans-serif;
 // strategy page
 .strategy{
   &__header{
-    background-color: #FCF089;
+    background-color: var(--color-strategy);
   }
   &__main{
-    background-color: #FCF089;
+    background-color:var(--color-strategy);
     &-wrap{
-      padding-bottom: 10rem;
+      padding: 5rem 11.8rem 6rem;
     }
   }
 }
@@ -1143,9 +1177,9 @@ $Gibson: 'Gibson', sans-serif;
   &__item{
     margin: 0.5em 0;
     position: relative;
-    background-image: linear-gradient(to right, $color_desc 30%, rgba(255, 255, 255, 0) 10%);
+    background-image: linear-gradient(to right, var(--color-desc) 30%, rgba(255, 255, 255, 0) 10%);
     background-position: bottom;
-    background-size: 5px 2px;
+    background-size: 0.5rem 0.2rem;
     background-repeat: repeat-x;
     padding: 5.8rem 0 ;
     &-header{
@@ -1154,13 +1188,13 @@ $Gibson: 'Gibson', sans-serif;
       span:first-child{
         font-size: 34px;
         line-height: 34px;
-        color: $color_desc;
+        color: var(--color-desc);
         margin-right: 9rem;
       }
       span:nth-child(2){
         font-size: 3rem;
         line-height: 3rem;
-        color: $main_color;
+        color: var(--main-color);
       }
     }
     &-toggle{
@@ -1169,10 +1203,10 @@ $Gibson: 'Gibson', sans-serif;
       top: 6.9rem;
       right: 0;
       line-height: 2.4rem;
-      color: $color_back;
+      color: var(--color-back);
       transition: all 0.3s ease;
       &:hover{
-        color: $main_color;
+        color:  var(--main-color);
       }
     }
     &-img{
@@ -1347,9 +1381,9 @@ label.error{
     &:not(:last-child){
       margin: 0 0 2rem 0;
       padding: 1rem;
-      background-image: linear-gradient(to right, $color_desc 30%, rgba(255, 255, 255, 0) 10%);
+      background-image: linear-gradient(to right, var(--color-desc) 30%, rgba(255, 255, 255, 0) 10%);
       background-position: bottom;
-      background-size: 5px 2px;
+      background-size: 0.5rem 0.2rem;
       background-repeat: repeat-x;
     }
   }
@@ -1558,7 +1592,6 @@ label.error{
     position: relative;
   }
   .footer__bottom-block{
-
     &:first-child{
       .footer__bottom-text{
         display: none;
@@ -1612,8 +1645,36 @@ label.error{
   .header{
     padding: 2rem ;
   }
+  .header__hidden-item:first-child{
+    margin-bottom: 3rem;
+  }
+  .header__hidden-title{
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .header__hidden-list li{
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .header__hidden-list a{
+
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+  .header__hidden-link li{
+    margin-bottom: 1rem;
+  }
   .header__burger-visible{
-    padding: 0rem;
+    padding: 8rem 0 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: scroll;
+  }
+  .header__social{
+    display: none;
   }
   .header__hidden-img{
     top: 2rem;
@@ -1622,20 +1683,9 @@ label.error{
   .header__burger-wrap {
     top: -7rem;
   }
-  //.header__burger-menu{
-  //  top: 5rem;
-  //  left: 50%;
-  //  transform:translate(-50%);
-  //}
-  .header__hidden-hide{
-    display: none;
-  }
+
   .header__hidden-block:last-child{
     margin: 0;
-    position: relative;
-    top: 10rem;
-    left: 50%;
-    transform: translate(-50%);
   }
 
   .header__hidden-link{
@@ -1643,7 +1693,7 @@ label.error{
     text-align: center;
   }
   .header__hidden-link li{
-    color: $color_back;
+    color: var(--color-back);
   }
   .header__social{
     justify-content: center;

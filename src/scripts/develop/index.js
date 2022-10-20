@@ -13,6 +13,14 @@ const sliderInsights = () =>{
     }
 }
 
+const addStyleHeader = ( classWrap, classHeader) =>{
+    console.log('sdsdssd')
+    if ($('.global-wrapper ').hasClass(classWrap)) {
+        console.log('dsdfdsf')
+        $('header').addClass(classHeader);
+    }
+}
+
 const validateForm = (modal,form) => {
     modal.fancybox();
     form.validate({
@@ -67,13 +75,20 @@ const accordion  = () =>{
 const openMenu  = () =>{
     $(".header__burger").click(function() {
         if ($("#header__burger-content").hasClass("header__burger-hidden")) {
-            $("#header__burger-content").attr("class", "header__burger-visible animated header__burger-menu");
+            $("#header__burger-content").attr("class", "header__burger-visible  header__burger-menu");
             $('body').css('overflow','hidden')
-            $('.header__burger-wrap').css({'background-color':'white','position':'relative'})
+            $('.header__logo').css('display','none');
+            $('.header__menu').css('display','none');
+            $('.header__block').css('justify-content','flex-end');
+
+            $('.header__burger-wrap').addClass('header__burger-relative')
         } else {
-            $("#header__burger-content").attr("class", "header__burger-hidden animated");
+            $("#header__burger-content").attr("class", "header__burger-hidden ");
             $('body').css('overflow','visible')
-            $('.header__burger-wrap').css({'background-color':'transparent','position':'absolute'})
+            $('.header__logo').css('display','block');
+            $('.header__menu').css('display','flex');
+            $('.header__block').css('justify-content','space-between');
+            $('.header__burger-wrap').removeClass('header__burger-relative')
         }
         $(this).toggleClass("header__burger-open");
     });
@@ -87,14 +102,23 @@ $(document).ready(function(){
 });
 
 $(window).load(function(){
+
+
     let formSubs = $('.subs__form'),
         modalSubs = $('.subs__modal'),
         formFooter = $('.footer__form'),
-        modalFooter= $('.footer__modal')
+        modalFooter= $('.footer__modal'),
+        cxWrap = $('.cx'),
+        cxHeader = $('.cx__header'),
+        strategyWrap = $('.strategy'),
+        strategyHeader = $('.strategy__header');
+    addStyleHeader(cxWrap, cxHeader);
+    addStyleHeader(strategyWrap, strategyHeader);
     accordion();
     openMenu();
     validateForm(modalSubs,formSubs)
     validateForm(modalFooter,formFooter)
+
 });
 
 $(window).resize(function(){
