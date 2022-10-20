@@ -27,18 +27,15 @@
 </head>
 <body>
 
-<div class="global-wrapper">
+<div class="global-wrapper ">
     <!-- HEADER -->
-    <header>
-        <header>
-            <div class="wrap">
-                <div class="header container">
-                    <div class="header__block">
-                        <div class="header__logo">
-                            <a href="index.html">
-                                <img src="img/icon/Logo.svg" alt="">
-                            </a>
-                        </div>
+    <header class="wrap">
+            <div class="header container">
+                <div class="header__block">
+                    <a href="index.html" class="header__logo">
+                        <img src="img/icon/Logo.svg" alt="">
+                    </a>
+                    <div class="header__flex">
                         <ul class="header__menu">
                             <li class="header__menu-item">
                                 <a href="">what we do</a>
@@ -55,28 +52,33 @@
                             <li class="header__menu-item">
                                 <a href="">careers</a>
                             </li>
-                            <li class="header__menu-item header__burger">
-                                <span></span>
-                                <span></span>
-                            </li>
+    
                         </ul>
+                        <div class="header__burger">
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
-                <div class="header__burger-wrap">
-                    <div class="container header__burger-container">
-                        <div id="header__burger-content" class="header__burger-hidden ">
-                            <div class="header__hidden-img">
-                                <img src="img/icon/logo-blue.svg" alt="">
-                            </div>
-                            <div class="header__hidden-block header__hidden-hide " >
+            </div>
+            <div class="header__burger-wrap">
+                <div class="container header__burger-container">
+                    <div id="header__burger-content" class="header__burger-hidden">
+                        <div class="header__hidden-img">
+                            <img src="img/icon/logo-blue.svg" alt="">
+                        </div>
+                        <div class="header__hidden-block " >
+                            <div class="header__hidden-item">
+                                <div class="header__hidden-title">What we do</div>
                                 <ul class="header__hidden-list">
-                                    <li>What we do</li>
                                     <li><a href="#">Customer experience</a></li>
                                     <li><a href="#">Strategy</a></li>
                                     <li><a href="#">Technology</a></li>
                                 </ul>
+                            </div>
+                            <div class="header__hidden-item">
+                                <div class="header__hidden-title">Case Studies</div>
                                 <ul class="header__hidden-list">
-                                    <li>Case Studies</li>
                                     <li><a href="#">Shufersal</a></li>
                                     <li><a href="#">Bank Hapoalim</a></li>
                                     <li><a href="#">Yellow</a></li>
@@ -84,62 +86,67 @@
                                     <li><a href="#">Catch App</a></li>
                                 </ul>
                             </div>
-                            <div class="header__hidden-block" >
-                                <ul class="header__hidden-link">
-                                    <li><a href="#">Solutions</a></li>
-                                    <li><a href="#">Careers</a></li>
-                                    <li><a href="#">Company</a></li>
-                                    <li><a href="#">Insights Center</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                                <ul class="header__social">
-                                    <li class="header__social-item main__social-item">
-                                        <a href="">
-                                            <svg class="main__social-svg">
-                                                <use href="#icon-instagram"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="header__social-item main__social-item">
-                                        <a href="">
-                                            <svg class="main__social-svg">
-                                                <use href="#icon-facebook"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="header__social-item main__social-item">
-                                        <a href="">
-                                            <svg class="main__social-svg">
-                                                <use href="#icon-linkedin"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                        </div>
+                        <div class="header__hidden-block" >
+                            <ul class="header__hidden-link">
+                                <li><a href="#">Solutions</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Insights Center</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                            <ul class="header__social">
+                                <li class="header__social-item main__social-item">
+                                    <a href="">
+                                        <svg class="main__social-svg">
+                                            <use href="#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="header__social-item main__social-item">
+                                    <a href="">
+                                        <svg class="main__social-svg">
+                                            <use href="#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="header__social-item main__social-item">
+                                    <a href="">
+                                        <svg class="main__social-svg">
+                                            <use href="#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
     </header>
     <!-- /HEADER -->
 
     <main>
-        <section class="mobdev section wrap">
-            <div class="mobdev__wrap container">
-                <div class="section__title-less">
-                    <h3>Mobile Development</h3>
-                </div>
-                    <div class="item">
-                        <div class="image-holder">
-                            <img src="img/icon/Apple.svg">
-                        </div>
+        <div class="section__title-less">
+            <h3>Mobile Development</h3>
+        </div>
+        <div class="item">
+            <div class="image-holder">
+                <img src="img/icon/Apple.svg">
+            </div>
 
-                        <div class="text-holder">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi ea earum error eveniet, expedita fugiat ipsum perferendis porro quod repudiandae temporibus veritatis vitae! Ad aperiam earum eligendi facere veritatis! Aliquam architecto aspernatur atque dicta doloremque exercitationem incidunt labore, obcaecati officiis optio quis quo ratione reiciendis reprehenderit velit. Et eveniet explicabo fugit id, nemo obcaecati sed similique. Assumenda doloribus itaque iusto laudantium voluptas! Aut exercitationem facilis, illum necessitatibus obcaecati porro quia similique? Accusantium aspernatur, aut beatae consectetur consequuntur cum dolorem dolorum eaque enim error esse et excepturi harum laborum molestias odio porro provident repudiandae sapiente tempora tempore vitae voluptates, voluptatibus. Accusamus accusantium aperiam architecto beatae blanditiis culpa, debitis dolorum eaque earum eius eligendi et ex exercitationem fuga illum labore laboriosam minima, molestiae natus neque nihil obcaecati odio omnis porro quas qui, quidem quo rem repellat repudiandae sed similique sit soluta tempora tenetur ut vero! Alias amet est id quo veniam. Accusamus aliquam assumenda cumque deleniti distinctio dolor doloremque esse eum eveniet explicabo fugit hic itaque, labore laudantium libero modi molestias nisi, officia quae quas quia quis quod quos ratione reiciendis sapiente sed similique sit suscipit tempora temporibus totam ut velit. A, asperiores, aut commodi consequuntur deserunt dolor dolore est, excepturi obcaecati pariatur perferendis qui quibusdam quos repellendus saepe sapiente sequi. Aut beatae consequuntur cumque dolore, ea eaque fugit impedit iure labore laudantium nemo nostrum nulla omnis perspiciatis quasi quidem quis ratione repudiandae saepe ullam vitae, voluptas, voluptate voluptates. Aliquam asperiores aspernatur labore nam nesciunt nobis perspiciatis quaerat quo repellendus voluptatibus? Accusantium amet debitis deserunt, dolores dolorum eligendi error est et excepturi exercitationem iste labore nobis officiis quia quod rem sed sequi soluta vero voluptate. Alias commodi ea fugiat id molestiae obcaecati quaerat tempore. Accusamus delectus distinctio dolor dolores eius illo nisi, omnis quaerat, quisquam ratione recusandae rerum sit tenetur vero.</p>
-                        </div>
+            <div class="text-holder">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi ea earum error eveniet, expedita fugiat ipsum perferendis porro quod repudiandae temporibus veritatis vitae! Ad aperiam earum eligendi facere veritatis! Aliquam architecto aspernatur atque dicta doloremque exercitationem incidunt labore, obcaecati officiis optio quis quo ratione reiciendis reprehenderit velit. Et eveniet explicabo fugit id, nemo obcaecati sed similique. Assumenda doloribus itaque iusto laudantium voluptas! Aut exercitationem facilis, illum necessitatibus obcaecati porro quia similique? Accusantium aspernatur, aut beatae consectetur consequuntur cum dolorem dolorum eaque enim error esse et excepturi harum laborum molestias odio porro provident repudiandae sapiente tempora tempore vitae voluptates, voluptatibus. Accusamus accusantium aperiam architecto beatae blanditiis culpa, debitis dolorum eaque earum eius eligendi et ex exercitationem fuga illum labore laboriosam minima, molestiae natus neque nihil obcaecati odio omnis porro quas qui, quidem quo rem repellat repudiandae sed similique sit soluta tempora tenetur ut vero! Alias amet est id quo veniam. Accusamus aliquam assumenda cumque deleniti distinctio dolor doloremque esse eum eveniet explicabo fugit hic itaque, labore laudantium libero modi molestias nisi, officia quae quas quia quis quod quos ratione reiciendis sapiente sed similique sit suscipit tempora temporibus totam ut velit. A, asperiores, aut commodi consequuntur deserunt dolor dolore est, excepturi obcaecati pariatur perferendis qui quibusdam quos repellendus saepe sapiente sequi. Aut beatae consequuntur cumque dolore, ea eaque fugit impedit iure labore laudantium nemo nostrum nulla omnis perspiciatis quasi quidem quis ratione repudiandae saepe ullam vitae, voluptas, voluptate voluptates. Aliquam asperiores aspernatur labore nam nesciunt nobis perspiciatis quaerat quo repellendus voluptatibus? Accusantium amet debitis deserunt, dolores dolorum eligendi error est et excepturi exercitationem iste labore nobis officiis quia quod rem sed sequi soluta vero voluptate. Alias commodi ea fugiat id molestiae obcaecati quaerat tempore. Accusamus delectus distinctio dolor dolores eius illo nisi, omnis quaerat, quisquam ratione recusandae rerum sit tenetur vero.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image-holder">
+                <img src="img/icon/Android.svg">
+            </div>
 
-                    </div>
+            <div class="text-holder">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi ea earum error eveniet, expedita fugiat ipsum perferendis porro quod repudiandae temporibus veritatis vitae! Ad aperiam earum eligendi facere veritatis! Aliquam architecto aspernatur atque dicta doloremque exercitationem incidunt labore, obcaecati officiis optio quis quo ratione reiciendis reprehenderit velit. Et eveniet explicabo fugit id, nemo obcaecati sed similique. Assumenda doloribus itaque iusto laudantium voluptas! Aut exercitationem facilis, illum necessitatibus obcaecati porro quia similique? Accusantium aspernatur, aut beatae consectetur consequuntur cum dolorem dolorum eaque enim error esse et excepturi harum laborum molestias odio porro provident repudiandae sapiente tempora tempore vitae voluptates, voluptatibus. Accusamus accusantium aperiam architecto beatae blanditiis culpa, debitis dolorum eaque earum eius eligendi et ex exercitationem fuga illum labore laboriosam minima, molestiae natus neque nihil obcaecati odio omnis porro quas qui, quidem quo rem repellat repudiandae sed similique sit soluta tempora tenetur ut vero! Alias amet est id quo veniam. Accusamus aliquam assumenda cumque deleniti distinctio dolor doloremque esse eum eveniet explicabo fugit hic itaque, labore laudantium libero modi molestias nisi, officia quae quas quia quis quod quos ratione reiciendis sapiente sed similique sit suscipit tempora temporibus totam ut velit. A, asperiores, aut commodi consequuntur deserunt dolor dolore est, excepturi obcaecati pariatur perferendis qui quibusdam quos repellendus saepe sapiente sequi. Aut beatae consequuntur cumque dolore, ea eaque fugit impedit iure labore laudantium nemo nostrum nulla omnis perspiciatis quasi quidem quis ratione repudiandae saepe ullam vitae, voluptas, voluptate voluptates. Aliquam asperiores aspernatur labore nam nesciunt nobis perspiciatis quaerat quo repellendus voluptatibus? Accusantium amet debitis deserunt, dolores dolorum eligendi error est et excepturi exercitationem iste labore nobis officiis quia quod rem sed sequi soluta vero voluptate. Alias commodi ea fugiat id molestiae obcaecati quaerat tempore. Accusamus delectus distinctio dolor dolores eius illo nisi, omnis quaerat, quisquam ratione recusandae rerum sit tenetur vero.</p>
+            </div>
+        </div>
 <!--                    <div class="item">-->
 <!--                        <div class="image-holder">-->
 <!--                            <img src="img/icon/Android.svg.svg">-->
@@ -178,10 +185,6 @@
 
 
 
-
-                </div><!-- END Reveal panel section -->
-            </div>
-        </section>
     </main>
 
     <!-- FOOTER -->
