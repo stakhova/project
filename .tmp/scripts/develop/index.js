@@ -27,7 +27,8 @@ const validateForm = (modal, form) => {
             },
             phone: {
                 required: true,
-                digits: true
+                digits: true,
+                minlength: 9
             }
         },
         messages: {
