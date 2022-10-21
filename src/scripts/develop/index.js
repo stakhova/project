@@ -13,18 +13,6 @@ const sliderInsights = () =>{
     }
 }
 
-// const addStyleHeader = ( classWrap, classHeader) =>{
-//     if ($('.global-wrapper ').hasClass(classWrap)) {
-//         $('header').addClass(classHeader);
-//     }
-// }
-
-const addStyle = () =>{
-    if ($('.global-wrapper ').hasClass('cx')) {
-        $('header').addClass('cx__header');
-    }
-}
-
 const validateForm = (modal,form) => {
     modal.fancybox();
     form.validate({
@@ -64,7 +52,7 @@ const accordion  = () =>{
     $('.culture__item-toggle').click(function(e) {
         e.preventDefault();
         let $this = $(this);
-
+        console.log($this)
         if ($this.next().hasClass('show')) {
             $this.next().removeClass('show');
             $this.next().slideUp(400);
@@ -84,7 +72,6 @@ const openMenu  = () =>{
             $('.header__logo').css('display','none');
             $('.header__menu').css('display','none');
             $('.header__block').css('justify-content','flex-end');
-
             $('.header__burger-wrap').addClass('header__burger-relative')
         } else {
             $("#header__burger-content").attr("class", "header__burger-hidden ");
@@ -100,7 +87,6 @@ const openMenu  = () =>{
 
 
 
-
 $(document).ready(function(){
     sliderInsights();
 });
@@ -110,18 +96,11 @@ $(window).load(function(){
         modalSubs = $('.subs__modal'),
         formFooter = $('.footer__form'),
         modalFooter= $('.footer__modal');
-    //     cxWrap = $('.cx'),
-    //     cxHeader = $('.cx__header'),
-    //     strategyWrap = $('.strategy'),
-    //     strategyHeader = $('.strategy__header');
-    // addStyleHeader(cxWrap, cxHeader);
-    // addStyleHeader(strategyWrap, strategyHeader);
-
-    addStyle();
     accordion();
     openMenu();
     validateForm(modalSubs,formSubs)
     validateForm(modalFooter,formFooter)
+    // $(document).on('click', 'елемент на який клікають', назва функції з логікою),
 
 });
 
