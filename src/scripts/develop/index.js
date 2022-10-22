@@ -52,38 +52,22 @@ const validateForm = (modal,form) => {
 const accordion  = () =>{
     $('.culture__item-toggle').click(function(e) {
         e.preventDefault();
-        let $this = $(this);
-        console.log($this)
-        if ($this.next().hasClass('show')) {
-            $this.next().removeClass('show');
-            $this.next().slideUp(400);
-        } else {
-            $this.parent().parent().find('li .culture__item-inner').removeClass('show');
-            $this.parent().parent().find('li .culture__item-inner').slideUp(400);
-            $this.next().toggleClass('show');
-            $this.next().slideToggle(0);
+        let acc = $(this);
+        if (acc.next().hasClass('show')) {
+            acc.next().removeClass('show');
+            acc.next().slideUp(400);
         }
+        acc.parent().parent().find('li .culture__item-inner').removeClass('show');
+        acc.parent().parent().find('li .culture__item-inner').slideUp(400);
+        acc.next().toggleClass('show');
+        acc.next().slideToggle(0);
     });
 }
 const openMenu  = () =>{
-    $(".header__burger").click(function() {
-        if ($("#header__burger-content").hasClass("header__burger-hidden")) {
-            $("#header__burger-content").attr("class", "header__burger-visible  header__burger-menu");
-            $('body').css('overflow','hidden')
-            $('.header__logo').css('display','none');
-            $('.header__menu').css('display','none');
-            $('.header__block').css('justify-content','flex-end');
-            $('.header__burger-wrap').addClass('header__burger-relative')
-        } else {
-            $("#header__burger-content").attr("class", "header__burger-hidden ");
-            $('body').css('overflow','visible')
-            $('.header__logo').css('display','block');
-            $('.header__menu').css('display','flex');
-            $('.header__block').css('justify-content','space-between');
-            $('.header__burger-wrap').removeClass('header__burger-relative')
-        }
-        $(this).toggleClass("header__burger-open");
-    });
+    $('.header__burger').toggleClass("header__burger-open");
+    $(".header__burger-menu").toggleClass('header__burger-visible')
+    $('.header__burger-wrap').toggleClass('header__burger-relative')
+    $('body').toggleClass('overflow')
 };
 
 
@@ -98,10 +82,10 @@ $(window).load(function(){
         formFooter = $('.footer__form'),
         modalFooter= $('.footer__modal');
     accordion();
-    openMenu();
     validateForm(modalSubs,formSubs)
     validateForm(modalFooter,formFooter)
     // $(document).on('click', 'елемент на який клікають', назва функції з логікою),
+    $('.header__burger').on('click', openMenu)
 
 });
 
