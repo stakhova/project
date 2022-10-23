@@ -68,6 +68,8 @@ const openMenu  = () =>{
     $(".header__burger-menu").toggleClass('header__burger-visible')
     $('.header__burger-wrap').toggleClass('header__burger-relative')
     $('body').toggleClass('overflow')
+    if ($(window).width() < 666) {
+    }
 };
 
 
