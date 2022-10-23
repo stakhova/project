@@ -1,6 +1,9 @@
 .overflow{
   overflow: hidden;
 }
+.none{
+  display: none;
+}
 
 // style wrap
 .wrap{
@@ -131,6 +134,16 @@
       column-count: 2;
       column-gap: 3.2rem;
       margin: 0 auto;
+      a{
+        //display: inline-block;
+        width: max-content;
+        position: relative;
+        //&:after{
+        //  content: url("../img/icon/ArrowBlue.svg");
+        //  top: 0;
+        //  right: -3rem;
+        //}
+      }
       & > * {
         width: 48.3rem;
       }
@@ -205,7 +218,7 @@
 //header style
 .header{
   padding: 4.4rem 4.8rem 0;
-  position: relative;
+  //position: relative;
   overflow: visible;
   &__block{
     display: flex;
@@ -314,11 +327,11 @@
     border-radius: 100% ;
     cursor: pointer ;
     position: relative;
-    z-index: 1;
+    z-index: 5;
     &-container{
       padding: 0 11.8rem;
       position: relative;
-      height: 100vh;
+      height: 100%;
     }
     & > *{
       width: 1.4rem;
@@ -346,14 +359,11 @@
           transition: .7s ease;
           background: var(--color-white);
         }
-
       }
     }
     &-menu {
-      display: none;
+      display: flex;
       transition-delay: 0.5s;
-      pointer-events: none;
-      cursor: default;
       justify-content: flex-start;
       padding: 21vh 0 5vh 22.2rem;
       background: var(--color-white);
@@ -363,21 +373,18 @@
       left: 0;
       top: 0;
     }
-    &-visible{
-      display: flex;
-    }
     &-wrap{
-      height: 100vh;
-      position: absolute;
+      display: none;
       left: 0;
       width: 100%;
       overflow: hidden;
-    }
-    &-relative{
-      background-color:var(--color-white);
-      position:relative;
-      top: -10rem;
       height: calc(100vh + 10rem);
+      top: -10rem;
+      position:relative;
+      background-color:var(--color-white);
+    }
+    &-show{
+      display: block;
     }
   }
 }
@@ -421,7 +428,7 @@
     justify-content: flex-start;
     flex-direction: column;
     position: fixed;
-    top: 31rem;
+    top: 40%;
     right: 5rem;
     z-index: 3;
     &-item{
@@ -462,13 +469,13 @@
   &__contactus{
     position: fixed;
     right: 2rem;
-    top: 62rem;
+    top: 70%;
     width: 10rem;
     height: 10rem;
     z-index: 3;
-    &-top{
-      top: 68vh;
-    }
+    //&-top{
+    //  top: 65%;
+    //}
   }
   &__flex{
     display: flex;
@@ -477,7 +484,8 @@
     margin-bottom: 4rem;
     &-img{
       height: 10rem;
-      width: max-content;
+      width: 100%;
+
     }
     &-left{
       margin-right: 6rem;
@@ -1369,6 +1377,10 @@
   .header__logo{
     filter: brightness(0) invert(1);
   }
+  .main__contactus{
+    //filter: brightness(0) invert(1);
+    display: none;
+  }
   .header__menu-item{
     color:var(--color-white) ;
   }
@@ -2053,12 +2065,11 @@ label.error{
   .header__hidden-link li{
     margin-bottom: 1rem;
   }
-  .header__burger-visible{
-    padding: 8rem 0 2rem;
+  .header__burger-menu{
+    padding: 10rem 0 2rem;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    overflow: scroll;
   }
 
   .header__hidden-img{

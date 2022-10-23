@@ -15,14 +15,24 @@ const sliderInsights = () => {
 
 const validateForm = (modal, form) => {
     modal.fancybox();
+    $.validator.addMethod("goodEmail", function (value, element) {
+        return this.optional(element) || /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i.test(value);
+    }, "Please enter valid email address");
+
+    $.validator.addMethod("goodName", function (value, element) {
+        return this.optional(element) || /^[a-zA-Z0-9._-]{2,30}$/i.test(value);
+    }, "Please enter a valid name");
+
     form.validate({
         rules: {
             name: {
                 required: true,
+                goodName: true,
                 minlength: 2
             },
             email: {
                 required: true,
+                goodEmail: true,
                 email: true
             },
             phone: {
@@ -48,26 +58,10 @@ const validateForm = (modal, form) => {
     });
 };
 
-const accordion = () => {
-    $('.culture__item-toggle').click(function (e) {
-        e.preventDefault();
-        let acc = $(this);
-        if (acc.next().hasClass('show')) {
-            acc.next().removeClass('show');
-            acc.next().slideUp(400);
-        }
-        acc.parent().parent().find('li .culture__item-inner').removeClass('show');
-        acc.parent().parent().find('li .culture__item-inner').slideUp(400);
-        acc.next().toggleClass('show');
-        acc.next().slideToggle(0);
-    });
-};
 const openMenu = () => {
     $('.header__burger').toggleClass("header__burger-open");
-    $(".header__burger-menu").toggleClass('header__burger-visible');
-    $('.header__burger-wrap').toggleClass('header__burger-relative');
-    $('body').toggleClass('overflow');
-    if ($(window).width() < 666) {}
+    $('.header__burger-wrap').toggleClass('header__burger-show');
+    $(window).width() > 666 ? $('body').toggleClass('overflow') : ($('main').toggleClass('none'), $('footer').toggleClass('none'));
 };
 
 $(document).ready(function () {
@@ -79,10 +73,9 @@ $(window).load(function () {
         modalSubs = $('.subs__modal'),
         formFooter = $('.footer__form'),
         modalFooter = $('.footer__modal');
-    accordion();
+    // accordion();
     validateForm(modalSubs, formSubs);
     validateForm(modalFooter, formFooter);
-    // $(document).on('click', 'елемент на який клікають', назва функції з логікою),
     $('.header__burger').on('click', openMenu);
 });
 
