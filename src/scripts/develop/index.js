@@ -1,3 +1,49 @@
+// $(document).ready(function() {
+//
+//
+//     $("#c1").fadeIn(0);
+//     console.log()
+//
+//     $(window).scroll(function() {
+//         let offsetArr = [];
+//         $(".mobile__item").each(function () {
+//             offsetArr.push($(this).offset().top);
+//         });
+//
+//         // let item = $(".mobile__item");
+//         // let offsetItem = item.offset();
+//
+//         let pos = $(document).scrollTop();
+//         console.log(offsetArr)
+//         console.log('off'+ offsetArr[0])
+//         console.log('pos'+ pos)
+//         if (pos > offsetItem) {
+//             hideAll("c1");
+//             $("#c1").fadeIn(400);
+//         }
+//         if (pos > 1000 && pos < 1500) {
+//             hideAll("c2");
+//             $("#c2").fadeIn(300);
+//         }
+//         if (pos > 1500 && pos < 2500) {
+//             hideAll("c3");
+//             $("#c3").fadeIn(0);
+//         }
+//
+//     });
+//
+//     function hideAll(exceptMe) {
+//         $(".mobile__img").each(function(i) {
+//             if ($(this).attr("id") == exceptMe) return;
+//             $(this).fadeOut(0);
+//         });
+//     }
+// });
+
+
+
+
+
 
 const sliderInsights = () =>{
     $('.insights__list').slick({
