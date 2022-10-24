@@ -172,31 +172,53 @@
   }
 
   &__linkto {
-    & > * {
-      font-weight: 400;
       font-size: 1.6rem;
+      line-height: 2.4rem;
       color: var(--color-white);
       padding: 0.4rem 0;
       width: max-content;
       transition: all 0.2s ease;
       display: inline-block;
       position: relative;
+      & > *{
+        width: max-content;
+        display: inline-block;
+        position: relative;
+        &:after {
+          content: "";
+          display: inline-block;
+          height:2.8rem;
+          width:2.8rem;
+          background-size: 2.8rem 2.8rem;
+          background-image: url("../img/icon/ar.svg");
+          background-repeat: no-repeat;
+          position: relative;
+          bottom: -0.8rem;
+          left: 0.8rem;
+        }
+      }
       &:hover {
         color: var(--color-orange);
       }
-      &:after {
-        content: "";
-        display: inherit;
-        height:2.8rem;
-        width:2.8rem;
-        background-size: 2.8rem 2.8rem;
-        background-image: url("../img/icon/ar.svg");
-        background-repeat: no-repeat;
-        position: relative;
-        bottom: -0.8rem;
-        left: 0.8rem;
-      }
+    &-blue {
+      font-size: 1.8rem;
+      color: var(--color-back);
+      position: relative;
+      padding: 0;
+        &:after {
+          content: "";
+          display: inline-block;
+          height:2.8rem;
+          width:2.8rem;
+          background-size: 2.8rem 2.8rem;
+          background-image: url("../img/icon/ArrowBlue.svg")!important;
+          background-repeat: no-repeat;
+          position: relative;
+          bottom: -0.8rem;
+          left: 0.8rem;
+        }
     }
+
   }
   &__modal{
     display: none;
@@ -1360,6 +1382,19 @@
 }
 //
 
+
+//.image {
+//  display: none;
+//  position: fixed;
+//  transform: translate(-50%, -50%);
+//  top: 50%;
+//  left: 50%;
+//}
+
+
+
+
+
 // technology page
 .technology{
   header{
@@ -1388,6 +1423,7 @@
     background-color:var(--color-technology);
   }
 }
+
 .mobile{
   overflow: visible;
   &__wrap{
@@ -1411,12 +1447,14 @@
 
   }
   &__img{
-    position: -webkit-sticky;
-    position: sticky;
+    //position: -webkit-sticky;
+    //position: sticky;
+    display: none;
+    position: fixed;
     max-width: 58rem;
     max-height: 59.9rem;
-    top: 0;
-    overflow: hidden;
+    //top: 0;
+    //overflow: hidden;
   }
 }
 
@@ -1469,6 +1507,7 @@
 
   }
 }
+
 .support{
   &__wrap{
     padding-top: 14rem;
@@ -1534,9 +1573,70 @@
     }
   }
 }
+//
 
+// careers page style
+.positions{
+  &__wrap{
+    padding: 13.8rem 22.3rem 16.6rem 11.8rem;
+  }
+  &__subtitle > *{
+    color:var(--color-desc);
+  }
+  &__title{
+    margin-bottom: 9.4rem;
+    & > *{
+      text-align: left;
+    }
+  }
+  &__name > *{
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    color: var(--main-color);
+    margin-right: 1rem;
+  }
+  &__block{
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child){
+      margin-bottom: 13.2rem;
+    }
+  }
+  &__list{
+    margin-left: 2rem;
+    width: 62%;
+  }
+  &__link{
+    display: flex;
+    align-items: baseline;
+    &:before{
+      position: relative;
+      content: "Apply";
+      font-size: 1.8rem;
+      left: -0.8rem;
+    }
+    &:after{
+      left: 0;
+    }
+  }
+  &__item{
+    &:not(:last-child){
+      background-image: linear-gradient(to right, var(--color-desc) 30%, rgba(255, 255, 255, 0) 10%);
+      background-position: bottom;
+      background-size: 0.5rem 0.2rem;
+      background-repeat: repeat-x;
+      padding-bottom: 3.8rem;
+      margin-bottom: 3.8rem;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+//
 
-//culture style
+//about page style
 .culture{
   &__item{
     margin: 0.5em 0;
@@ -2235,6 +2335,26 @@ label.error{
     top: 0;
     margin-top: 2rem;
   }
-
+  .positions__block{
+    flex-direction: column;
+  }
+  .positions__list{
+    margin: 0 ;
+    width: 100%;
+  }
+  .positions__name > *{
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+  .positions__item:not(:last-child){
+    padding-bottom: 1.8rem;
+    margin-bottom: 1.8rem;
+  }
+  .positions__block:not(:last-child){
+    margin-bottom: 6rem;
+  }
+  .positions__link:before{
+    display: none ;
+  }
 }
 
