@@ -41,8 +41,15 @@
 // });
 
 
-
-
+$('.video').parent().click(function () {
+    if($(this).children(".video").get(0).paused) {
+        $(this).children(".video").get(0).play();
+        $(this).children(".opportunity__video-pause ").fadeOut();
+    }else{
+        $(this).children(".opportunity__video-pause ").get(0).pause();
+        $(this).children(".playpause").fadeIn();
+    }
+});
 
 
 const sliderInsights = () =>{
@@ -120,7 +127,8 @@ $(window).load(function(){
     let formSubs = $('.subs__form'),
         modalSubs = $('.subs__modal'),
         formFooter = $('.footer__form'),
-        modalFooter= $('.footer__modal');
+        modalFooter= $('.footer__modal'),
+        playButton = $("#play_button");
     // accordion();
     validateForm(modalSubs,formSubs)
     validateForm(modalFooter,formFooter)
