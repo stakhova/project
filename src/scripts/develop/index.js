@@ -41,30 +41,72 @@
 // });
 
 
-$('.video').parent().click(function () {
-    if($(this).children(".video").get(0).paused) {
-        $(this).children(".video").get(0).play();
-        $(this).children(".opportunity__video-pause ").fadeOut();
-    }else{
-        $(this).children(".opportunity__video-pause ").get(0).pause();
-        $(this).children(".playpause").fadeIn();
-    }
-});
+// $('.video').parent().click(function () {
+//     if($(this).children(".video").get(0).paused) {
+//         $(this).children(".video").get(0).play();
+//         $(this).children(".opportunity__video-pause").fadeOut();
+//     } else{
+//         $(this).children(".opportunity__video-pause").get(0).pause();
+//         $(this).children(".playpause").fadeIn();
+//     }
+// });
 
 
-const sliderInsights = () =>{
+
+
+
+const playVideo = () =>{
+    $('.video').parent().click(function () {
+        if($(this).children(".video").get(0).paused) {
+            $(this).children(".video").get(0).play();
+            $(this).children(".opportunity__video-pause").fadeOut();
+        } else{
+            $(this).children(".opportunity__video-pause").get(0).pause();
+            $(this).children(".playpause").fadeIn();
+        }
+    });
+}
+
+const sliderInsights = () => {
     $('.insights__list').slick({
         dots:true,
         arrows : true,
         slidesToShow: 3,
         slidesToScroll: 1,
+        infinite: false,
         prevArrow: '<button class="insights-prev"></button>',
-        nextArrow: '<button class="insights-next"></button>'
+        nextArrow: '<button class="insights-next"></button>',
+        responsive: [
+            {
+                breakpoint: 666,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+          ]
     });
-    if ($(window).width() < 666) {
-        $(".insights__list").slick('slickSetOption', 'slidesToShow', 1);
-    }
 }
+
+const sliderPeople = () =>{
+    $('.career__slider').slick({
+        dots:false,
+        arrows : false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 1000,
+        responsive: [
+            {
+                breakpoint: 666,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
+    });
+}
+
+
 
 const validateForm = (modal,form) => {
     modal.fancybox();
@@ -114,13 +156,34 @@ const validateForm = (modal,form) => {
 const openMenu  = () =>{
     $('.header__burger').toggleClass("header__burger-open");
     $('.header__burger-wrap').toggleClass('header__burger-show')
-    $(window).width() > 666 ? $('body').toggleClass('overflow') :( $('main').toggleClass('none'),$('footer').toggleClass('none'))
+    $(window).width() > 666 ?
+        $('body').toggleClass('overflow') :
+        ( $('main').toggleClass('none'),
+          $('footer').toggleClass('none'),
+          $('.strategy header').toggleClass('header__white'),
+          $('.cx header').toggleClass('header__white'),
+          $('.technology header').toggleClass('header__white'))
 };
 
+const accordion  = () =>{
+    $('.culture__item-toggle').click(function(e) {
+        e.preventDefault();
+        let acc = $(this);
+        if (acc.next().hasClass('show')) {
+            acc.next().removeClass('show');
+            acc.next().slideUp(400);
+        }
+        acc.parent().parent().find('li .culture__item-inner').removeClass('show');
+        acc.parent().parent().find('li .culture__item-inner').slideUp(400);
+        acc.next().toggleClass('show');
+        acc.next().slideToggle(0);
+    });
+}
 
 
 $(document).ready(function(){
     sliderInsights();
+    sliderPeople();
 });
 
 $(window).load(function(){
@@ -129,11 +192,11 @@ $(window).load(function(){
         formFooter = $('.footer__form'),
         modalFooter= $('.footer__modal'),
         playButton = $("#play_button");
-    // accordion();
+    accordion();
     validateForm(modalSubs,formSubs)
     validateForm(modalFooter,formFooter)
     $('.header__burger').on('click', openMenu)
-
+    playVideo();
 });
 
 $(window).resize(function(){
