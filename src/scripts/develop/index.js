@@ -26,8 +26,8 @@ const sliderPeople = () =>{
         arrows : false,
         slidesToShow: 4,
         slidesToScroll: 1,
-        autoplay: true,
-        speed: 1000,
+        // autoplay: true,
+        // speed: 1000,
         responsive: [
             {
                 breakpoint: 666,
