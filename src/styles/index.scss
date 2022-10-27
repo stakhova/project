@@ -39,8 +39,9 @@
     margin: 0 auto;
   }
   &__overflow{
-    padding: 0;
+    //padding: 0;
     overflow: hidden;
+    padding: 12rem 0 0 11.8rem;
   }
 
 }
@@ -95,8 +96,6 @@
       color: var(--color-white);
     }
     &-overflow {
-      padding: 10rem 0 0 10.6rem;
-      margin-bottom: 4rem;
       & > *{
         font-size: 24.1rem;
         line-height: 24.1rem;
@@ -116,12 +115,13 @@
       line-height: 3.2rem;
       color: var(--color-desc);
     }
-    &-main > *{
+    &-main {
+      & > * {
       font-size: 2rem;
-      line-height: 3.2rem;
+      line-height: 3.8rem;
       color: var(--main-color);
-      margin-bottom: 3rem;
-      &:not(:last-child){
+      }
+      p:not(:last-child){
         margin-bottom: 5rem;
       }
     }
@@ -430,7 +430,7 @@
     padding-top:6.8rem;
     padding-bottom:16.2rem;
     &-less{
-      padding-top:6.8rem;
+      padding-top:7.5rem;
       padding-bottom:8.2rem;
       position: relative;
     }
@@ -1161,7 +1161,7 @@
 .research{
   &__wrap{
     position: relative;
-    padding: 10rem 0 11rem;
+    padding: 12rem 11.8rem 0.6rem;
   }
   &__img{
     max-width:120.4rem;
@@ -1206,7 +1206,7 @@
 
 .experience{
   &__wrap{
-    padding: 0rem  1.3rem 20rem 11.8rem;
+    padding: 4.1rem  1.3rem 20rem 11.8rem;
     display: flex ;
     justify-content: space-between;
   }
@@ -1217,7 +1217,7 @@
     margin-right: 3.2rem;
   }
   &__item{
-    max-width: 58.6rem;
+    max-width: 58.4rem;
     &:last-child{
       margin-top: 18.2rem;
     }
@@ -1240,7 +1240,7 @@
   z-index: 2;
   overflow: visible;
   &__wrap{
-    padding-top: 5.5rem;
+    padding-top: 5.4rem;
     padding-bottom: 14.8rem;
   }
   &__subtitle {
@@ -1302,7 +1302,7 @@
     &:nth-child(1){
       width: 136.3rem;
       height: 107rem;
-      top: 64%;
+      top: 62%;
       left: 50%;
       transform: translate(-50%,-50%);
       z-index: -1;
@@ -1331,7 +1331,7 @@
 .transformation{
   position: relative;
   &__wrap{
-    padding: 12rem 11.8rem 5rem;
+    padding: 11.1rem 11.8rem 3.5rem;
   }
   &__img{
     max-width:120.4rem;
@@ -1405,7 +1405,7 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 25.1rem;
-    padding-bottom: 14.2rem;
+    padding-bottom: 16.3rem;
     background-image: linear-gradient(to right, var(--color-desc) 30%, rgba(255, 255, 255, 0) 10%);
     background-position: bottom;
     background-size: 0.5rem 0.2rem;
@@ -1417,12 +1417,12 @@
   }
 
   &__title{
-    mark{
-      background: linear-gradient(141.39deg, #eec9a8 13.88%, #e4892f 106.32%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-fill-color: transparent;
-    }
+    //mark{
+    //  background: linear-gradient(141.39deg, #eec9a8 13.88%, #e4892f 106.32%);
+    //  -webkit-background-clip: text;
+    //  -webkit-text-fill-color: transparent;
+    //  text-fill-color: transparent;
+    //}
     & > * {
       text-align: left;
     }
@@ -1441,7 +1441,7 @@
 
 .mapping{
   &__wrap{
-    padding: 14rem 0 20.9rem;
+    padding: 13.9rem 0 21.4rem;
   }
   &__desc{
     margin-top: 5.6rem;
@@ -1484,6 +1484,12 @@
       background-color: var(--main-color) ;
     }
   }
+  .section__title-thin > *{
+    color: var(--color-white);
+  }
+  .section__desc-main > *{
+    color: var(--color-white);
+  }
   .header__burger-open{
     background-color: var(--main-color);
   }
@@ -1507,15 +1513,9 @@
   &__wrap{
     overflow: visible;
   }
-  &__title{
-    margin-bottom: 4rem;
-    mark{
-      background: linear-gradient(141.39deg, #88beeb 13.88%, #cfa9fa 106.32%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-fill-color: transparent;
-    }
-  }
+
+
+
   &__item{
     display: flex;
     justify-content: space-between;
@@ -1527,8 +1527,11 @@
     max-width: 58.6rem;
     min-height: 80rem;
   }
-  &__desc{
-
+  &__column{
+    &>*{
+      column-gap: 5.6rem;
+      width: 46.9rem;
+    }
   }
   &__img{
     position: -webkit-sticky;
@@ -1595,7 +1598,7 @@
 .support{
   &__wrap{
     padding-top: 14rem;
-    padding-bottom: 17.8rem;
+    padding-bottom: 18.2rem;
   }
   &__img{
     max-width:120.4rem;
@@ -1610,7 +1613,7 @@
   }
   &__block{
     max-width: 79.2rem;
-    margin:  8rem auto 25rem;
+    margin:  7.7rem auto 25.1rem;
   }
   &__product{
     display:flex;
@@ -1621,7 +1624,7 @@
     background-size: 0.5rem 0.2rem;
     background-repeat: repeat-x;
     padding-bottom: 18rem;
-    margin:25rem 0 18rem;
+    margin:25.4rem 0 18rem;
     &-img{
       max-width: 58.2rem;
       max-height: 48rem;
@@ -1790,22 +1793,26 @@
   }
   &__title{
     margin-bottom: 5.6rem;
-    &-comm{
-      mark{
-        background: linear-gradient(141.39deg, #3c3a77 13.88%, #d0abd9 106.32%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
-      }
-    }
-    &-people{
-      mark{
-        background: linear-gradient(141.39deg, #e069b4 13.88%, #f2d3b0 106.32%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
-      }
-    }
+    //&-comm{
+    //  mark{
+    //    background: linear-gradient(141.39deg, #3c3a77 13.88%, #d0abd9 106.32%);
+    //    -webkit-background-clip: text;
+    //    -webkit-text-fill-color: transparent;
+    //    text-fill-color: transparent;
+    //  }
+    //}
+    //background: linear-gradient(141.39deg, #3c3a77 13.88%, #d0abd9 106.32%);
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
+    //text-fill-color: transparent;
+    //&-people{
+    //  mark{
+    //    background: linear-gradient(141.39deg, #e069b4 13.88%, #f2d3b0 106.32%);
+    //    -webkit-background-clip: text;
+    //    -webkit-text-fill-color: transparent;
+    //    text-fill-color: transparent;
+    //  }
+    //}
 
   }
   &__block{
@@ -2114,7 +2121,32 @@
     margin-bottom: 10.8rem;
   }
 }
-
+.gradient{
+  &__blue mark{
+    background: linear-gradient(141.39deg, #3c3a77 13.88%, #d0abd9 106.32%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+  &__viovet mark{
+    background: linear-gradient(141.39deg, #88beeb 13.88%, #cfa9fa 106.32%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+  &__pink mark{
+    background: linear-gradient(141.39deg, #e069b4 13.88%, #f2d3b0 106.32%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+  &__orange mark{
+    background: linear-gradient(141.39deg, #eec9a8 13.88%, #e4892f 106.32%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+}
 
 
 label.error{
@@ -2189,8 +2221,8 @@ label.error{
   }
   .main__social{
     right: 1rem;
-    top: 15rem;
-    //top: calc(50% - 2rem);
+    top: calc(50vh - 5.5rem);
+
   }
   .main__contactus{
     bottom: 2rem;
@@ -2204,8 +2236,8 @@ label.error{
   }
 
   .section__title > *{
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
     margin-bottom: 1.2rem;
   }
   .section__desc > *{
