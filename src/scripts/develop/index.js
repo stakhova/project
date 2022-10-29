@@ -1,4 +1,12 @@
 
+const playVideo = () => {
+    $('.video').get(0).play()
+    $(".opportunity__video-play").fadeOut();
+}
+const pauseVideo = () =>{
+    $('.video').get(0).pause()
+    $(".opportunity__video-play").fadeIn()
+}
 
 const sliderInsights = () => {
     $('.insights__list').slick({
@@ -113,6 +121,9 @@ $(window).load(function(){
     validateForm(modalSubs,formSubs)
     validateForm(modalFooter,formFooter)
     $('.header__burger').on('click', openMenu)
+    $('.opportunity__video-play').on('click', playVideo)
+    $('.video').on('click', pauseVideo)
+
     // playVideo();
     // accordion();
 });
