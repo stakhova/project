@@ -3,6 +3,7 @@ const playVideo = () => {
     $('.video').get(0).play();
     $(".opportunity__video-play").fadeOut();
 };
+
 const pauseVideo = () => {
     $('.video').get(0).pause();
     $(".opportunity__video-play").fadeIn();
@@ -44,7 +45,8 @@ const sliderPeople = () => {
 };
 
 const validateForm = (modal, form) => {
-    modal.fancybox();
+    console.log('gdfgfdgdf');
+
     $.validator.addMethod("goodEmail", function (value, element) {
         return this.optional(element) || /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i.test(value);
     }, "Please enter valid email address");
@@ -82,6 +84,7 @@ const validateForm = (modal, form) => {
             }
         },
         submitHandler: function () {
+            modal.fancybox();
             modal.trigger('click');
             form[0].reset();
         }
@@ -103,15 +106,17 @@ $(window).load(function () {
     let formSubs = $('.subs__form'),
         modalSubs = $('.subs__modal'),
         formFooter = $('.footer__form'),
-        modalFooter = $('.footer__modal');
+        modalFooter = $('.footer__modal'),
+        formJob = $('.job__form'),
+        modalJob = $('.job__modal');
     // playButton = $("#play_button");
+
     validateForm(modalSubs, formSubs);
     validateForm(modalFooter, formFooter);
+    validateForm(modalJob, formJob);
     $('.header__burger').on('click', openMenu);
     $('.opportunity__video-play').on('click', playVideo);
     $('.video').on('click', pauseVideo);
-
-    // playVideo();
     // accordion();
 });
 

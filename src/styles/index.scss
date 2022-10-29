@@ -1950,6 +1950,11 @@
       display: flex;
       justify-content: space-between;
     }
+    &-item{
+      position: relative;
+      max-width: 21.2rem;
+      margin-right: 2.4rem;
+    }
   }
 
   &__button{
@@ -1963,8 +1968,6 @@
     border: none;
     border-bottom: 0.1rem solid var(--color-footer);
     padding-bottom: 1.6rem;
-    margin-right: 2.4rem;
-    max-width: 21.2rem;
     width: 100%;
     &-upload{
       width: max-content;
@@ -2066,7 +2069,6 @@
 //
 
 //solution page
-
 .solution{
   &__wrap{
     padding: 7.5rem 11.8rem 15.8rem;
@@ -2128,7 +2130,33 @@
   }
 
 }
+//
+
 //about page style
+.about{
+  &__main{
+    &-wrap{
+      padding: 14.5rem;
+      padding-bottom: 7.7rem;
+      text-align: center;
+    }
+    &-title{
+      margin: 1.6rem 0 4rem;
+      mark{
+        background: linear-gradient(141.39deg, #a9d4ba 13.88%, #efc455 50%, #d0561a 106.32%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+      }
+    }
+    &-desc > *{
+      color: var(--main-color);
+    }
+    &-desc{
+      margin-bottom: 9.8rem;
+    }
+  }
+}
 .culture{
   &__item{
     padding: 5.8rem 0 ;
@@ -2235,8 +2263,9 @@
 label.error{
   position: absolute;
   color: indianred;
-  bottom: 0;
+  bottom: -1rem;
   left: 0;
+  z-index: 1;
   width: max-content;
 }
 
@@ -2566,6 +2595,7 @@ label.error{
   }
   label.error{
     font-size: 1.2rem;
+    bottom: 0;
   }
 
   .footer__content{
@@ -3016,5 +3046,56 @@ label.error{
     height: auto;
     margin-top: 1rem;
   }
+  .job__form-block{
+    flex-direction: column;
+  }
+  .job__form-item{
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  .job__button{
+    margin: 2rem auto 0;
+    padding:1rem 4rem;
+  }
+  .job__back{
+    top: 0;
+    left: 2rem;
+  }
+  .job__back > *{
+    font-size: 1.8rem;
+  }
+  .job__block{
+    margin-bottom: 5rem;
+  }
+  .benefits{
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+  }
+  .benefits__item{
+    margin: 0 0 2rem 0;
+  }
+  .benefits__img{
+    margin: 0 auto 1.5rem;
+  }
+  .benefits__title{
+    max-width: 100%;
+  }
+  .job__benefits-title{
+    text-align: center;
+    margin-bottom: 5rem;
+  }
 }
 
+
+
+.desamiu-dsanug{text-align:left;width:100%;overflow:hidden;white-space: nowrap;}
+.desamiu-dsanug span { display:inline-block;width:100%;text-indent:0;animation: desamiu-dsanug 10s linear infinite}
+.desamiu-dsanug span:hover{animation-play-state: paused}
+@keyframes desamiu-dsanug {
+  0%  { transform: translate(100%, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+@media only screen and (max-width: 440px) {
+  .desamiu-dsanug span{animation:none;padding-left:0}
+}
