@@ -15,7 +15,7 @@
 
 
 const accordion  = () =>{
-    $('.culture__item-toggle').click(function(e) {
+    function handleOpenCloseAcc(e){
         e.preventDefault();
         let acc = $(this);
         if (acc.next().hasClass('show')) {
@@ -26,7 +26,8 @@ const accordion  = () =>{
         acc.parent().parent().find('li .culture__item-inner').slideUp(400);
         acc.next().toggleClass('show');
         acc.next().slideToggle(0);
-    });
+    }
+    $(document).on('click', '.culture__item-toggle', handleOpenCloseAcc)
 }
 const playVideo = () => {
     $('.video').get(0).play()
@@ -159,7 +160,6 @@ $(window).load(function(){
     $('.header__burger').on('click', openMenu)
     $('.opportunity__video-play').on('click', playVideo)
     $('.video').on('click', pauseVideo)
-    // $('.culture__item-toggle').on('click', accordion)
     accordion();
 });
 
