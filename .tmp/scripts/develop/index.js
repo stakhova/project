@@ -1,4 +1,33 @@
+// const accordion  = (e) =>{
+//     // $('.culture__item-toggle').click(function(e) {
+//         e.preventDefault();
+//         let acc = $('.culture__item-toggle');
+//         if (acc.next().hasClass('show')) {
+//             acc.next().removeClass('show');
+//             acc.next().slideUp(400);
+//         }
+//         acc.parent().parent().find('li .culture__item-inner').removeClass('show');
+//         acc.parent().parent().find('li .culture__item-inner').slideUp(400);
+//         acc.next().toggleClass('show');
+//         acc.next().slideToggle(0);
+//     // });
+// }
 
+
+const accordion = () => {
+    $('.culture__item-toggle').click(function (e) {
+        e.preventDefault();
+        let acc = $(this);
+        if (acc.next().hasClass('show')) {
+            acc.next().removeClass('show');
+            acc.next().slideUp(400);
+        }
+        acc.parent().parent().find('li .culture__item-inner').removeClass('show');
+        acc.parent().parent().find('li .culture__item-inner').slideUp(400);
+        acc.next().toggleClass('show');
+        acc.next().slideToggle(0);
+    });
+};
 const playVideo = () => {
     $('.video').get(0).play();
     $(".opportunity__video-play").fadeOut();
@@ -45,8 +74,6 @@ const sliderPeople = () => {
 };
 
 const validateForm = (modal, form) => {
-    console.log('gdfgfdgdf');
-
     $.validator.addMethod("goodEmail", function (value, element) {
         return this.optional(element) || /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i.test(value);
     }, "Please enter valid email address");
@@ -108,16 +135,19 @@ $(window).load(function () {
         formFooter = $('.footer__form'),
         modalFooter = $('.footer__modal'),
         formJob = $('.job__form'),
-        modalJob = $('.job__modal');
-    // playButton = $("#play_button");
+        modalJob = $('.job__modal'),
+        formContact = $('.contact__form'),
+        modalContact = $('.contact__modal');
 
     validateForm(modalSubs, formSubs);
     validateForm(modalFooter, formFooter);
     validateForm(modalJob, formJob);
+    validateForm(modalContact, formContact);
     $('.header__burger').on('click', openMenu);
     $('.opportunity__video-play').on('click', playVideo);
     $('.video').on('click', pauseVideo);
-    // accordion();
+    // $('.culture__item-toggle').on('click', accordion)
+    accordion();
 });
 
 $(window).resize(function () {});
@@ -164,29 +194,6 @@ $(window).resize(function () {});
 //     }
 // });
 
-
-// $('.video').parent().click(function () {
-//     if($(this).children(".video").get(0).paused) {
-//         $(this).children(".video").get(0).play();
-//         $(this).children(".opportunity__video-pause").fadeOut();
-//     } else{
-//         $(this).children(".opportunity__video-pause").get(0).pause();
-//         $(this).children(".playpause").fadeIn();
-//     }
-// });
-
-
-// const playVideo = () =>{
-//     $('.video').parent().click(function () {
-//         if($(this).children(".video").get(0).paused) {
-//             $(this).children(".video").get(0).play();
-//             $(this).children(".opportunity__video-pause").fadeOut();
-//         } else{
-//             $(this).children(".opportunity__video-pause").get(0).pause();
-//             $(this).children(".playpause").fadeIn();
-//         }
-//     });
-// }
 
 // const accordion  = () =>{
 //     $('.culture__item-toggle').click(function(e) {

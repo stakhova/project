@@ -20,6 +20,7 @@
 :root{
     --main-color: #000F2E;
     --color-white: #fff;
+    --color-black: #000;
     --color-subtitle: #002EAA;
     --color-desc: #717783;
     --color-back: #0045FF;
@@ -29,8 +30,22 @@
     --color-cx: #79D6B0;
     --color-technology: #5D51F2;
     --color-mark: #F3B4BD;
-
+    --color-system: #D91818;
+    --color-input: #F2F3F5;
+    --gradient-violet: linear-gradient(141.39deg, #88beeb 13.88%, #cfa9fa 106.32%);
+    --gradient-pink: linear-gradient(141.39deg, #e069b4 13.88%, #f2d3b0 106.32%);
+    --gradient-orange: linear-gradient(141.39deg, #eec9a8 13.88%, #e4892f 106.32%);
+    --gradient-black: linear-gradient(165.52deg, #000F2E 29.9%, #000000 130.06%);
+    --gradient-blue: linear-gradient(141.39deg, #3c3a77 13.88%, #d0abd9 106.32%);
+    --gradient-research: linear-gradient(141.39deg, #74E6CF 13.88%, #C0E594 106.32%);
+    --gradient-design:linear-gradient(141.39deg, #d56569 13.88%, #eaa86d 106.32%);
+    --gradient-look1:linear-gradient(141.39deg, #ddccfc 13.88%, #b0d4f6 106.32%);
+    --gradient-look2:linear-gradient(141.39deg, #91c6ed 13.88%, #2022e5 106.32%);
+    --gradient-opp: linear-gradient(141.39deg, #de566a 13.88%,  #e4892f 106.32%);
+    --gradient-about: linear-gradient(141.39deg, #a9d4ba 13.88%, #efc455 50%, #d0561a 106.32%);
+    --color-dots: linear-gradient(to right, var(--color-desc) 30%, rgba(255, 255, 255, 0) 10%);
     --Gibson: 'Gibson', sans-serif;
+
 }
 
 
