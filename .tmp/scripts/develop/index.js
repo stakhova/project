@@ -80,7 +80,9 @@ const sliderHighlights = () => {
         $(".highlights__list").addClass('highlights__slider');
         $('.highlights__slider').slick({
             dots: true,
-            arrows: false
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1
         });
     }
 };
