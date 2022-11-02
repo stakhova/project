@@ -1,17 +1,21 @@
-// const accordion  = (e) =>{
-//     // $('.culture__item-toggle').click(function(e) {
-//         e.preventDefault();
-//         let acc = $('.culture__item-toggle');
-//         if (acc.next().hasClass('show')) {
-//             acc.next().removeClass('show');
-//             acc.next().slideUp(400);
-//         }
-//         acc.parent().parent().find('li .culture__item-inner').removeClass('show');
-//         acc.parent().parent().find('li .culture__item-inner').slideUp(400);
-//         acc.next().toggleClass('show');
-//         acc.next().slideToggle(0);
-//     // });
-// }
+
+const marquee  = () =>{
+    $('.marquee').marquee({
+        allowCss3Support: true,
+        css3easing: 'linear',
+        easing: 'linear',
+        delayBeforeStart: 0,
+        direction: 'left',
+        duplicated: true,
+        duration: 10000,
+        pauseOnCycle: false,
+        pauseOnHover: false,
+        startVisible: false,
+        // gap: 142,
+    });
+}
+
+
 
 
 const accordion  = () =>{
@@ -151,6 +155,7 @@ $(document).ready(function(){
     sliderInsights();
     sliderPeople();
     sliderHighlights();
+    marquee();
 });
 
 $(window).load(function(){
@@ -176,6 +181,9 @@ $(window).load(function(){
 $(window).resize(function(){
 
 });
+
+
+
 
 
 
@@ -226,19 +234,3 @@ $(window).resize(function(){
 
 
 
-
-
-// const accordion  = () =>{
-//     $('.culture__item-toggle').click(function(e) {
-//         e.preventDefault();
-//         let acc = $(this);
-//         if (acc.next().hasClass('show')) {
-//             acc.next().removeClass('show');
-//             acc.next().slideUp(400);
-//         }
-//         acc.parent().parent().find('li .culture__item-inner').removeClass('show');
-//         acc.parent().parent().find('li .culture__item-inner').slideUp(400);
-//         acc.next().toggleClass('show');
-//         acc.next().slideToggle(0);
-//     });
-// }
