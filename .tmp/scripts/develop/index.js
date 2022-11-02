@@ -74,6 +74,16 @@ const sliderPeople = () => {
     });
 };
 
+const sliderHighlights = () => {
+    if (window.innerWidth <= 666) {
+        $(".highlights__list").addClass('highlights__slider');
+        $('.highlights__slider').slick({
+            dots: true,
+            arrows: false
+        });
+    }
+};
+
 const validateForm = (modal, form) => {
     $.validator.addMethod("goodEmail", function (value, element) {
         return this.optional(element) || /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i.test(value);
@@ -128,6 +138,7 @@ const openMenu = () => {
 $(document).ready(function () {
     sliderInsights();
     sliderPeople();
+    sliderHighlights();
 });
 
 $(window).load(function () {
