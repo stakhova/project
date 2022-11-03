@@ -16,20 +16,23 @@ const marquee  = () =>{
 }
 
 
-
+const upload = () => {
+    $('#upload-file').change(function() {
+        let filepath = this.value;
+        let m = filepath.match(/([^\/\\]+)$/);
+        let filename = m[1];
+        $('#filename').html(filename);
+    });
+}
 
 const changeImage = () =>{
     $("#img1").fadeIn(0);
     $(window).scroll(function() {
-        // let offsetArr = [];
-        // $(".mobile__item").each(function () {
-        //     offsetArr.push($(this).offset().top);
-        // });
         let item1 = $("#block1");
         let item2 = $("#block2");
         let item3 = $("#block3");
         let item4 = $("#block4");
-        let diff = 150;
+        let diff = 200;
         let offsetItem1 = item1.offset().top - diff;
         let offsetItem2 = item2.offset().top - diff;
         let offsetItem3 = item3.offset().top - diff;
@@ -133,13 +136,13 @@ const sliderPeople = () =>{
 const sliderHighlights = () =>{
     if (window.innerWidth <= 666) {
         $(".highlights__list").addClass('highlights__slider');
-        $('.highlights__slider').slick({
-            dots: true,
-            arrows : false,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-        });
     }
+    $(".highlights__slider").slick({
+        dots: true,
+        arrows : false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
 }
 
 
@@ -227,6 +230,7 @@ $(window).load(function(){
     $('.opportunity__video-play').on('click', playVideo)
     $('.video').on('click', pauseVideo)
     accordion();
+    upload();
 });
 
 $(window).resize(function(){
