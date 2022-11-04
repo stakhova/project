@@ -40,6 +40,7 @@
   }
   &__overflow{
     padding: 12rem 0 5.4rem 11.8rem;
+    overflow: initial;
   }
 
 }
@@ -281,6 +282,16 @@
       position: relative;
       margin-right: 1.5rem;
     }
+    &-img{
+      width: 2.4rem;
+      height: 2.4rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+
+    }
+
   }
   &__hidden{
     &-item{
@@ -1841,6 +1852,7 @@
       text-transform: uppercase;
       color: var(--color-back);
       position: relative;
+      padding-left: 2.8rem;
       &:before{
         content: '';
         display: inline-block;
@@ -1849,9 +1861,10 @@
         background-size: 2.4rem 2.4rem;
         background-image: url("../img/icon/Arrow_left.svg");
         background-repeat: no-repeat;
-        position: relative;
-        bottom: -0.5rem;
-        left: -0.4rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
       }
     }
   }
@@ -2450,7 +2463,7 @@
       }
     }
     &-input{
-      border: 0.1px solid var(--color-footer);
+      border: 0.1rem solid var(--color-footer);
       border-radius: 6rem;
       padding: 1.6rem 4rem 1.6rem 8rem;
       width:100%;
@@ -2898,7 +2911,83 @@
   }
 
 }
+//
 
+//download page
+
+.download {
+  margin-top:3.2rem ;
+  border-top: 0.1rem solid var(--color-footer);
+  &__title{
+    margin-bottom: 4rem;
+    & > *{
+      font-weight: 700;
+      font-size: 2.8rem;
+      line-height: 2.8rem;
+    }
+  }
+  &__img{
+    width: 100%;
+    margin: -8.4rem 0 5.5rem;
+  }
+  &__wrap{
+    padding: 4.8rem 11.8rem 9.6rem;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+    margin: 0 -4rem;
+  }
+  &__desc{
+    & > *{
+      font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+  }
+  &__list{
+    margin:1.6rem 0 4rem;
+    list-style-type: disc;
+    position:relative;
+    right: 2.5rem;
+    &-title{
+      margin-top: 4rem;
+    }
+  }
+  &__block {
+    margin: 0 4rem;
+    width: calc(50% - 8rem);
+  }
+  &__form{
+    position: relative;
+    z-index: 2;
+    padding: 4rem 3.2rem;
+    max-width: 48.2rem;
+    background: var(--color-white);
+    box-shadow: 0 1.6rem 4rem var(--color-shadow-grey);
+    border-radius: 0.8rem;
+    input{
+      padding: 0 0 1.6rem 0;
+      margin-bottom: 3.6rem;
+    }
+    &-desc{
+      margin-bottom:  2.4rem;
+      & > *{
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        color:var(--color-desc);
+      }
+    }
+    &-button{
+      & > *{
+        width: 100%;
+      }
+    }
+  }
+}
+//
 //general style
 .gradient{
   &__blue mark{
@@ -3378,7 +3467,7 @@ label.error{
     height: 0.1rem;
   }
   .header{
-    padding: 2rem ;
+    padding: 2rem 2rem 0 2rem;
   }
   .header__hidden-item:first-child{
     margin-bottom: 3rem;
@@ -3409,7 +3498,7 @@ label.error{
   }
 
   .header__hidden-img{
-    top: 2rem;
+    top: 4rem;
     left: 2rem;
   }
   .header__burger-wrap {
@@ -3762,11 +3851,11 @@ label.error{
     padding:1rem 4rem;
   }
   .job__back{
-    top: 0;
+    top: 1rem;
     left: 2rem;
   }
   .job__back > *{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   .job__block{
     margin-bottom: 5rem;
@@ -3867,6 +3956,7 @@ label.error{
   .articles__item{
     flex-direction: column;
   }
+
   .section__linkto-blue:after {
     bottom: -0.3rem;
     left: 0.4rem;
@@ -3919,10 +4009,7 @@ label.error{
     width: 200%;
     left: 50%;
   }
-  .mobile__block{
-    max-width: 60%;
-    padding: 7rem 0 3rem;
-  }
+
   .marquee__item{
     font-size: 2rem;
     line-height: 2rem;
@@ -3958,6 +4045,54 @@ label.error{
   .info__quote {
     margin-top: 3.6rem;
   }
+  .download{
+    margin-top: 2rem;
+  }
+  .download__content{
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+  .download__block{
+    margin: 0;
+    width: 100%;
+  }
+  .download__block{
+    margin-bottom: 3rem;
+  }
+  .download__desc > *{
+    font-size: 1.4rem;
+    line-height: 2.1rem
+  }
+  .download__title{
+    margin-bottom: 2rem;
+  }
+  .download__list-title{
+    margin-top: 2rem;
+  }
+  .download__img{
+    width: 150%;
+    margin: -5.4rem 0 2rem;
+  }
+  .articles__link:after{
+    left: -0.4rem;
+  }
+  .job__input-file{
+    top: 2rem;
+    width: max-content;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .job__text{
+    margin-bottom: 2rem;
+  }
+  .mobile__block{
+    padding: 3rem 0;
+    max-width: 100%;
+  }
+  .mobile__content{
+    margin-top: 2rem;
+  }
+
 }
 
 
