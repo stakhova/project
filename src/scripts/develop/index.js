@@ -32,7 +32,8 @@ const changeImage = () =>{
         let item2 = $("#block2");
         let item3 = $("#block3");
         let item4 = $("#block4");
-        let diff = 200;
+        let diff;
+         (window.innerWidth <= 666 ) ? diff = 100 : diff = 200
         let offsetItem1 = item1.offset().top - diff;
         let offsetItem2 = item2.offset().top - diff;
         let offsetItem3 = item3.offset().top - diff;
@@ -121,7 +122,7 @@ const sliderPeople = () =>{
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 1000,
+        speed: 500,
         responsive: [
             {
                 breakpoint: 666,
