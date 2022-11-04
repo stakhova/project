@@ -25,8 +25,39 @@ const upload = () => {
     });
 }
 
+
+
+// const changeImage = () =>{
+//     $("#img0").fadeIn(0);
+//     $(window).scroll(function() {
+//         function showAll() {
+//             $(".mobile__block").each(function(i) {
+//                 let diff;
+//                 let pos = $(document).scrollTop();
+//                 (window.innerWidth <= 666 ) ? diff = 100 : diff = 200
+//                 console.log('ddd' + $(this).height())
+//                 let index = 'img' + i
+//                 if (pos > ($(this).offset().top - diff) ) {
+//                     hideAll(index);
+//                     $(".mobile__img").each(function() {
+//                         $(this).fadeIn(0);
+//                     });
+//                 }
+//             });
+//         }
+//         showAll()
+//     });
+//
+//     function hideAll(exceptMe) {
+//         $(".mobile__img").each(function() {
+//             if ($(this).attr("id") == exceptMe) return;
+//             $(this).fadeOut(0);
+//         });
+//     }
+// }
+
 const changeImage = () =>{
-    $("#img1").fadeIn(0);
+    $("#img0").fadeIn(0);
     $(window).scroll(function() {
         let item1 = $("#block1");
         let item2 = $("#block2");
@@ -69,6 +100,7 @@ const changeImage = () =>{
         });
     }
 }
+
 
 const accordion  = () =>{
     function handleOpenCloseAcc(e){
