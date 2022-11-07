@@ -134,6 +134,7 @@ const sliderInsights = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: false,
+
         prevArrow: '<button class="insights-prev"></button>',
         nextArrow: '<button class="insights-next"></button>',
         responsive: [
@@ -141,6 +142,7 @@ const sliderInsights = () => {
                 breakpoint: 666,
                 settings: {
                     slidesToShow: 1,
+
                 }
             },
           ]
@@ -175,6 +177,7 @@ const sliderHighlights = () =>{
         arrows : false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        rtl: true,
     });
 }
 
@@ -182,11 +185,11 @@ const sliderHighlights = () =>{
 const validateForm = (modal,form) => {
     $.validator.addMethod("goodEmail", function(value, element) {
         return this.optional(element) || /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i.test(value);
-    }, "Please enter valid email address");
+    }, "Enter valid email");
 
     $.validator.addMethod("goodName",function(value,element) {
         return this.optional(element) || /^[a-zA-Z0-9._-]{2,30}$/i.test(value);
-    },"Please enter a valid name");
+    },"Enter a valid name");
 
     form.validate({
         rules: {
@@ -208,12 +211,12 @@ const validateForm = (modal,form) => {
         },
         messages: {
             name: {
-                required: "Please specify your name",
+                required: "Specify your name",
                 minlength: "Name can't be shorter than 2 characters"
             },
             email: {
-                required: "Please enter your email address",
-                email: "Please enter valid email address"
+                required: "Enter your email",
+                email: "Enter valid email"
             }
         },
         submitHandler: function () {

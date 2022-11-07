@@ -23,11 +23,7 @@
   max-width: 144rem;
   padding: 10rem 11.8rem;
   margin: 0 auto;
-  font-family: var(--Gibson);
-  color:  var(--main-color);
   overflow: hidden;
-  font-size: 1.6rem;
-  line-height: 150%;
   &__less{
     max-width: 99.8rem;
     width: 100%;
@@ -137,24 +133,6 @@
       font-weight: 300;
       color: var(--color-footer);
     }
-    &-column {
-      column-count: 2;
-      column-gap: 3.2rem;
-      margin: 0 auto;
-      a{
-        //display: inline-block;
-        width: max-content;
-        position: relative;
-        //&:after{
-        //  content: url("../img/icon/ArrowBlue.svg");
-        //  top: 0;
-        //  right: -3rem;
-        //}
-      }
-      & > * {
-        width: 48.3rem;
-      }
-    }
   }
 
   &__text > * {
@@ -179,14 +157,15 @@
   }
 
   &__linkto {
-      font-size: 1.6rem;
-      line-height: 2.4rem;
-      color: var(--color-white);
       padding: 0.4rem 0;
       width: max-content;
       transition: all 0.2s ease;
       display: inline-block;
       position: relative;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: var(--color-white);
+      font-weight: 400;
       & > *{
         width: max-content;
         display: inline-block;
@@ -209,7 +188,8 @@
       }
     &-blue {
       font-size: 1.8rem;
-      color: var(--color-back);
+       color: var(--color-back);
+      font-weight: 400;
       position: relative;
       padding: 0;
         &:after {
@@ -1506,9 +1486,11 @@
   }
   &__images{
     height: inherit;
+    min-width: 50%;
+    position: relative;
+
   }
   &__block{
-
     padding: 16rem 0 6rem;
   }
   &__img{
@@ -1519,7 +1501,7 @@
     max-width: 58rem;
     max-height: 59.9rem;
     top: 0;
-    //overflow: hidden;
+
   }
   &__desc{
     p:last-child{
@@ -1529,18 +1511,29 @@
 }
 
 .web{
+  color: var(--color-white);
   &__wrap{
     padding-top: 12rem;
-    padding-bottom: 15.3rem;
+    padding-bottom: 1.3rem;
   }
-  color: var(--color-white);
+  &__description{
+    text-align: center;
+    & > *{
+      color:var(--color-input);
+      display: inline;
+    }
+  }
+  &__link{
+    font-size:2rem ;
+    line-height: 2.4rem;
+  }
   &__content{
     display: flex;
     justify-content: space-between;
     margin-top: 12rem;
   }
   &__block{
-    max-width: 47.6rem;
+    width: 40%;
     margin-right: 10vw;
   }
   &__img{
@@ -1560,28 +1553,22 @@
     line-height: 3.4rem;
   }
   &__item{
-    max-width: 27.7rem;
-    min-width: 18rem;
-    &:first-child{
-      margin-right: 3.2rem;
-    }
-  }
-  &__row{
-    display: flex;
-    justify-content: space-between;
-    &:not(:last-child){
-      margin-bottom: 14rem;
-    }
+    width: calc(50% - 3.2rem);
+    margin: 0 1.6rem 14rem 1.6rem ;
   }
   &__list{
-
+    width: 53%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -1.6rem;
   }
 }
 
 .support{
   &__wrap{
     padding-top: 14rem;
-    padding-bottom: 18.2rem;
+    padding-bottom: 22.2rem;
   }
   &__img{
     max-width:120.4rem;
@@ -1811,6 +1798,7 @@
       margin:auto;
       background-size:contain;
       background-position: center;
+      cursor: pointer;
     }
   }
   &__img{
@@ -1837,6 +1825,9 @@
 }
 
 .job{
+  label.error {
+    bottom: -3rem;
+  }
   &__wrap{
     padding: 19.5rem 11.8rem 13.4rem;
     position: relative;
@@ -1931,9 +1922,10 @@
     padding-bottom: 1.6rem;
     width: 100%;
     &-file{
+      width: max-content;
       position: absolute;
       font-size: 1.6rem;
-      top: 3rem;
+      top: 3.5rem;
       left: 0;
     }
     &-upload{
@@ -2029,7 +2021,7 @@
     height: 8.2rem;
     margin-bottom: 3.2rem;
   }
-  &__title{
+  &__title > *{
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 2.6rem;
@@ -2748,38 +2740,48 @@
     }
   }
 }
+.single__post{
+  p{
+    margin-bottom: 3.2rem;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    color: var(--main-color);
 
-.info{
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  overflow: visible;
-  &__download{
-    border: 0.1rem solid var(--color-footer);
-    border-radius: 0.8rem;
-    padding: 2.4rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5.6rem;
-    &-title{
-      & > *{
-        font-weight: 700;
-        font-size: 2.2rem;
-        line-height: 3.2rem;
-      }
-    }
-    &-button{
-      padding: 1.2rem 5.4rem;
-      color:var(--color-white);
-      background-color: var(--color-back);
-      display: inline-block;
-    }
   }
-  &__quote{
-    margin-top: 6.2rem;
+  h4 {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    margin: 5.6rem 0 3.2rem;
+    color: var(--color-subtitle);
+  }
+  img{
+    margin: 5.6rem 0 1.6rem;
+    max-width: 79.2rem;
+    max-height: 44.6rem;
+    display: block;
+  }
+  span{
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: var(--color-desc);
+  }
+  ul{
+    margin-bottom: 5.6rem;
+  }
+  blockquote {
+    margin-top: 5.6rem;
     padding:2.4rem 3.2rem 0 0 ;
     position: relative;
+    font-weight: 300;
+    font-size: 2.2rem;
+    line-height: 3.8rem;
+    color: var(--color-desc);
+    font-style: italic;
     &:after{
       content: '';
       position: absolute;
@@ -2801,18 +2803,44 @@
       width: 2.4rem;
       height:1.6rem;
     }
-    & > *{
-      font-weight: 300;
-      font-size: 2.2rem;
-      line-height: 3.8rem;
-      color: var(--color-desc);
-      font-style: italic;
-    }
+  }
+  li{
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    color: var(--main-color);
 
+  }
+}
+.info{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  overflow: visible;
+  &__download{
+    border: 0.1rem solid var(--color-footer);
+    border-radius: 0.8rem;
+    padding: 2.4rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5.6rem 0 5.6rem;
+    &-title{
+      & > *{
+        font-weight: 700;
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+      }
+    }
+    &-button{
+      padding: 1.2rem 5.4rem;
+      color:var(--color-white);
+      background-color: var(--color-back);
+      display: inline-block;
+    }
   }
   &__article{
     background-color: var(--color-article);
-    //opacity: 0.5;
     padding: 8.7rem 6.5rem 8.7rem 11.8rem;
     max-width: 46rem;
     width: 100%;
@@ -2851,9 +2879,7 @@
       }
     }
     &-img{
-      margin: 5.6rem 0 1.6rem;
-      max-width: 79.2rem;
-      max-height: 44.6rem;
+
     }
     &-text{
       & > *{
@@ -2865,7 +2891,6 @@
       }
     }
   }
-
   &__form{
     position: relative;
     overflow: hidden;
@@ -2911,11 +2936,12 @@
       }
     }
     &-button{
-      padding: 0.95rem 1.6rem;
+      padding: 0.95rem ;
       color: var(--color-white);
       background-color: var(--color-back);
       border: none;
-      width: max-content;
+      text-align: center;
+      width: 14rem;
     }
     &-img{
       position: absolute;
@@ -3077,7 +3103,19 @@ label.error{
 
 
 
-
+@media only screen and ( max-width: 1024px) {
+  .mobile__images{
+    right: -5rem;
+  }
+  .section__title-thin > *{
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+  .download__img{
+    position: absolute;
+    bottom: 0;
+  }
+}
 
 @media only screen and ( max-width: 666px) {
   .container{
@@ -3657,9 +3695,12 @@ label.error{
   .web__item:first-child{
     margin: 0 0 2rem 0;
   }
+  .web__list{
+    width: 100%;
+  }
   .web__item{
     margin-bottom:2rem ;
-    max-width: 100%;
+    width: 100%;
     text-align: center;
   }
   .web__img{
@@ -3667,7 +3708,7 @@ label.error{
   }
   .web__block{
     margin:  0 0 2rem 0;
-    max-width: 100%;
+    width: 100%;
     text-align: center;
   }
   .support__img{
@@ -3722,7 +3763,8 @@ label.error{
   }
   .opportunity__video{
     margin: 0;
-    max-width: 32.32rem;
+    max-width: 32.4rem;
+    width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
 
@@ -3735,7 +3777,8 @@ label.error{
     margin-bottom:5rem;
   }
   .opportunity__img-column{
-    max-width: 100%;
+    max-width: 32.4rem;
+    width: 100%;
     height: auto;
   }
   .opportunity__block{
@@ -3755,6 +3798,7 @@ label.error{
   .section__linkto-blue{
     font-size: 1.4rem;
     line-height: 2.1rem;
+
   }
   .section__linkto-blue:after{
     width: 1.5rem;
@@ -4110,6 +4154,7 @@ label.error{
   .download__img{
     width: 150%;
     margin: -5.4rem 0 2rem;
+    position: relative;
   }
   .articles__link:after{
     left: -0.4rem;
@@ -4145,6 +4190,13 @@ label.error{
   .ins__drop-title > *:after{
     display: none;
   }
+  .mobile__images{
+    display: none;
+  }
+  .job label.error {
+    bottom: 0;
+  }
+
 }
 
 
