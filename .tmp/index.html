@@ -64,9 +64,9 @@
             <div class="header__burger-wrap">
                 <div class="container header__burger-container">
                     <div class="header__burger-menu">
-                        <div class="header__hidden-img">
+                        <a class="header__hidden-img">
                             <img src="img/icon/logo-blue.svg" alt="">
-                        </div>
+                        </a>
                         <div class="header__hidden-block " >
                             <div class="header__hidden-item">
                                 <div class="header__hidden-title">What we do</div>
@@ -98,23 +98,23 @@
                             <ul class="header__social">
                                 <li class="header__social-item main__social-item">
                                     <a href="">
-                                        <svg class="main__social-svg">
-                                            <use href="../img/icon/symbol-defs.svg#icon-instagram"></use>
-                                        </svg>
+                                        <div class="header__social-img">
+                                            <img src="../img/icon/insta.svg" alt="">
+                                        </div>
                                     </a>
                                 </li>
                                 <li class="header__social-item main__social-item">
                                     <a href="">
-                                        <svg class="main__social-svg">
-                                            <use href="../img/icon/symbol-defs.svg#icon-facebook"></use>
-                                        </svg>
+                                        <div class="header__social-img">
+                                            <img src="../img/icon/face.svg" alt="">
+                                        </div>
                                     </a>
                                 </li>
                                 <li class="header__social-item main__social-item">
                                     <a href="">
-                                        <svg class="main__social-svg">
-                                            <use href="../img/icon/symbol-defs.svg#icon-linkedin"></use>
-                                        </svg>
+                                        <div class="header__social-img">
+                                            <img src="../img/icon/linked.svg" alt="">
+                                        </div>
                                     </a>
                                 </li>
                             </ul>
@@ -126,6 +126,7 @@
     <!-- /HEADER -->
 
     <main>
+        <div class="listOfContacts"></div>
         <section class="main section wrap">
             <div class="main__wrap container">
                 <div class="main__block">
@@ -163,11 +164,9 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="main__contactus">
-                        <a href="">
-                            <img src="img/icon/Contact.svg" alt="">
-                        </a>
-                    </div>
+                    <a href="" class="main__contactus">
+                        <img src="img/icon/ButtonsMess.svg" alt="">
+                    </a>
                 </div>
             </div>
         </section>
@@ -373,8 +372,10 @@
                     <a href="">View all</a>
                 </div>
             </div>
-            <div class="insights__paragraph container">
-                <p><mark>Pushing all the boundaries</mark> to keep you at the forefront, we provide end-to-end <mark>solutions</mark>from <mark>business strategies</mark> to product definition, all the way through to <mark>product design</mark> and <mark>development</mark>, always ensuring the customer experience is <mark>smooth</mark>, <mark>innovative</mark> and <mark>exciting</mark>.</p>
+            <div class="paragraph">
+                <div class="container paragraph__insights  ">
+                    <p><mark>Pushing all the boundaries</mark> to keep you at the forefront, we provide end-to-end <mark>solutions</mark>from <mark>business strategies</mark> to product definition, all the way through to <mark>product design</mark> and <mark>development</mark>, always ensuring the customer experience is <mark>smooth</mark>, <mark>innovative</mark> and <mark>exciting</mark>.</p>
+                </div>
             </div>
         </section>
         <section class="offer section wrap section__black">
@@ -464,29 +465,29 @@
                         <p>We're certain you'll leave with more knowledge and feeling inspired.</p>
                     </div>
                     <form class="subs__form">
-                    <div class="subs__input-item">
-                        <input class="subs__input" type="text" name="name" placeholder="Name">
-                    </div>
-                    <div class="subs__input-block">
                         <div class="subs__input-item">
-                            <input class="subs__input subs__input-less input__email" name="email" type="email" placeholder="Email">
+                            <input class="subs__input" type="text" name="name" placeholder="Name">
+                        </div>
+                        <div class="subs__input-block">
+                            <div class="subs__input-item subs__input-less">
+                                <input class="subs__input input__email" name="email" type="email" placeholder="Email">
+                            </div>
+                            <div class="subs__input-item subs__input-less">
+                                <input class="subs__input" name="phone" type="text" placeholder="Phone">
+                            </div>
                         </div>
                         <div class="subs__input-item">
-                            <input class="subs__input subs__input-less" name="phone" type="text" placeholder="Phone">
+                            <input class="subs__input" type="text" placeholder="Message">
                         </div>
-                    </div>
-                    <div class="subs__input-item">
-                        <input class="subs__input" type="text" placeholder="Message">
-                    </div>
-                    <div class="subs__button">
-                        <button type="submit">Submit</button>
-                    </div>
-                    <div class="section__modal subs__modal" >
-                        <div class="section__modal-content">
-                            <h2>Thank you! <br> We will definitely contact you</h2>
+                        <div class="subs__button">
+                            <button type="submit">Submit</button>
                         </div>
-                    </div>
-                </form>
+                        <div class="section__modal subs__modal" >
+                            <div class="section__modal-content">
+                                <h2>Thank you! <br> We will definitely contact you</h2>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -624,6 +625,9 @@
 <!-- build:js scripts/plagins.js -->
 <script type="text/javascript" src="scripts/plagins/device.js" ></script>
 <!--<script type="text/javascript" src="scripts/plagins/jquery.fancybox.min.js" ></script>-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script type="text/javascript" src="scripts/plagins/jquery.formstyler.min.js" ></script>
 <script type="text/javascript" src="scripts/plagins/jquery.validate.min.js" ></script>
 <script type="text/javascript" src="scripts/plagins/maskInput.js" ></script>
@@ -633,6 +637,11 @@
 <!--<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
+
+
+
+
 <!-- endbuild -->
 
 <!-- build:js scripts/main.js -->

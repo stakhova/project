@@ -4,6 +4,7 @@
     //= partials/header.html
 
     <main>
+        <div class="listOfContacts"></div>
         <section class="main section wrap">
             <div class="main__wrap container">
                 <div class="main__block">
@@ -41,11 +42,9 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="main__contactus">
-                        <a href="">
-                            <img src="img/icon/Contact.svg" alt="">
-                        </a>
-                    </div>
+                    <a href="" class="main__contactus">
+                        <img src="img/icon/ButtonsMess.svg" alt="">
+                    </a>
                 </div>
             </div>
         </section>
@@ -344,29 +343,29 @@
                         <p>We're certain you'll leave with more knowledge and feeling inspired.</p>
                     </div>
                     <form class="subs__form">
-                    <div class="subs__input-item">
-                        <input class="subs__input" type="text" name="name" placeholder="Name">
-                    </div>
-                    <div class="subs__input-block">
                         <div class="subs__input-item">
-                            <input class="subs__input subs__input-less input__email" name="email" type="email" placeholder="Email">
+                            <input class="subs__input" type="text" name="name" placeholder="Name">
+                        </div>
+                        <div class="subs__input-block">
+                            <div class="subs__input-item subs__input-less">
+                                <input class="subs__input input__email" name="email" type="email" placeholder="Email">
+                            </div>
+                            <div class="subs__input-item subs__input-less">
+                                <input class="subs__input" name="phone" type="text" placeholder="Phone">
+                            </div>
                         </div>
                         <div class="subs__input-item">
-                            <input class="subs__input subs__input-less" name="phone" type="text" placeholder="Phone">
+                            <input class="subs__input" type="text" placeholder="Message">
                         </div>
-                    </div>
-                    <div class="subs__input-item">
-                        <input class="subs__input" type="text" placeholder="Message">
-                    </div>
-                    <div class="subs__button">
-                        <button type="submit">Submit</button>
-                    </div>
-                    <div class="section__modal subs__modal" >
-                        <div class="section__modal-content">
-                            <h2>Thank you! <br> We will definitely contact you</h2>
+                        <div class="subs__button">
+                            <button type="submit">Submit</button>
                         </div>
-                    </div>
-                </form>
+                        <div class="section__modal subs__modal" >
+                            <div class="section__modal-content">
+                                <h2>Thank you! <br> We will definitely contact you</h2>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

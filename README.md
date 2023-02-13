@@ -1,27 +1,3 @@
-![](http://sheep.fish/wp-content/themes/sheepfish/images/logo2.png)
-# Sheep.Fish base front v0.2.0
-
-> The initial layout from [Sheep.Fish](http://sheep.fish) team
-
-
-## Features
-
-Please see our [gulpfile](gulpfile.js) for up to date information on what we support.
-
-* enable [ES2015 features](https://babeljs.io/docs/learn-es2015/) using [Babel](https://babeljs.io)
-* CSS Autoprefixing
-* Built-in preview server with BrowserSync
-* Automagically compile Sass with [libsass](http://libsass.org)
-* Map compiled CSS to source stylesheets with source maps
-* Image optimization
-
-## What plugins are connected in stock
-* [Device.js](https://github.com/matthewhudson/device.js)
-* [fancyBox v3](https://github.com/fancyapps/fancybox)
-* [jQuery Form Styler](http://dimox.name/jquery-form-styler/)
-* [jQuery Validation Plugin](https://jqueryvalidation.org/)
-* [MASKED INPUT PLUGIN](http://digitalbush.com/projects/masked-input-plugin/)
-* [Slick slider](https://github.com/kenwheeler/slick/)
 
 ## Getting Started
 
