@@ -240,12 +240,13 @@ const openMenu  = () =>{
 };
 
 
+
 $(document).ready(function(){
     sliderInsights();
     sliderPeople();
     sliderHighlights();
     marquee();
-    changeImage()
+    changeImage();
 });
 
 $(window).load(function(){

@@ -5,6 +5,7 @@
   display: none;
 }
 
+
 // style wrap
 .wrap{
   font-family: var(--Gibson);
@@ -38,7 +39,6 @@
     padding: 12rem 0 5.4rem 11.8rem;
     overflow: initial;
   }
-
 }
 //
 
@@ -3068,6 +3068,12 @@
   }
 }
 
+
+.thank{
+  &__wrap{
+    padding:7.2rem 0 1.4rem;
+  }
+}
 mark{
   -webkit-background-clip: text!important;
   -webkit-text-fill-color: transparent;
